@@ -1,0 +1,24 @@
+{
+  "name": "porterbackend",
+  "version": "1.0.0",
+  "description": "Hello there, as a student of Masai School we have construct week wehere we can utilize the knowledge we gain throughout the particular unit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dheerajbisht362/porterBackend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dheerajbisht362/porterBackend/issues"
+  },
+  "homepage": "https://github.com/dheerajbisht362/porterBackend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15"
+  }
+}
