@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet details</title>
+</head>
+<link rel="stylesheet" href="userWallet.css" >
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script src="https://kit.fontawesome.com/133eda6a97.js" crossorigin="anonymous"></script>
+<body>
+    <div class="header">
+        <div class="headTop">
+            <div><a href="../home.html"><img src="../images/porter_logo_d.jpeg" /></a></div>
+            <div><img src="../images/truckFEN.jpg"  /></div>
+            <div class="userIn" style="float:right">
+                <i class="fas fa-user fa-2x"></i>
+                <div style="display:inline" id="nameUser"></div>
+                <div class="dropdown">
+                    <button class="dropbtn">>></button>
+                    <div class="dropdown-content">
+                        <a href="#"id="userEmail"></a>
+                        <a href="../home.html">Sign out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headBottom">
+            <div><a href="userOrderHistory.html">ORDER HISTORY</a></div>
+            <div>PROFILE</div>
+            <div><a href="userWallet.html">USER WALLET</a></div>
+        </div>
+    </div>
+    <div class="lowerPart">
+        <div class="leftPart">
+            <div class="bal">Balance</div> 
+            <div id="totalMoney"></div>
+            <div><button>ADD MONEY</button></div>
+            <div>FILTER</div>
+            <div><select id="money"><option value="all">All Transactions</option>
+            <option value="debit">All Debit</option>
+            <option value="credit">All Credit</option>
+            </select>
+            <div><button onclick="search()">Submit</button></div>
+            </div>
+        </div>
+        <div class="rightPart">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>DESCRIPTION</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="getData">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    var details = [[1,"TATA ACE", "Saurabh", "open", 943, "05 / 06 / 2021"],
+        [1, "TATA ACE", "Raj","accepted", 794,"23 / 04 / 2021"],
+        [1, "8FT PICKUP", "Charles", "completed",2046, "26 / 01 / 2021"],
+        [2, "8FT PICKUP", "Charles", "live",490, "05 / 07 / 2021"],
+        [2, "TATA ACE", "Inder", "completed", 1035, "18 / 06 / 2021"],
+        [2, "TATA ACE", "Inder", "open", 2086, "24 / 02 / 2021"],
+        [1, "3 Wheeler", "Saurabh", "completed", 446, "20 / 05 / 2021"],
+        [2,"TATA ACE", "Charles", "completed", 789, "13 / 01 / 2021"],
+        [2, "3 Wheeler", "Saurabh", "accepted", 876, "22 / 03 / 2021"],
+        [1, "TATA ACE", "Inder", "open",1079, "26 / 06 / 2021"],
+        [2, "3 Wheeler", "Saurabh", "live", 8068, "28 / 02 / 2021"],
+        [2, "TATA ACE", "Raj", "completed", 7304, "27 / 02 / 2021"],
+]
+    function putBalance() {
+        let sum = 0;
+            for (var i = 0; i < details.length; i++) {
+                if (details[i][0] == 1) sum+= details[i][4]
+            }
+            document.getElementById('totalMoney').textContent = " ₹ " + sum
+        }
+    putBalance()
+    function putData(){
+        
+        for (var i = 0; i <details.length; i++){
+            tableEntry(details[i])
+        }
+    }
+     function putCredit() {
+            for (var i = 0; i < details.length; i++) {
+                if (details[i][0] == 1) tableEntry(details[i])
+            }
+        }
+    function putDebit(){
+         for (var i = 0; i < details.length; i++) {
+            if(details[i][0] == 2) tableEntry(details[i])
+        }
+    }
+    function tableEntry(arr){
+        var table = document.getElementById("getData");
+
+        var tdDate = document.createElement("td");
+        var tdDesc = document.createElement("td");
+        var tdAmount = document.createElement("td");
+
+        tdDate.textContent = arr[5]
+        tdDesc.textContent = arr[1] + " delivery by "+ arr[2]
+        tdAmount.textContent = arr[4]
+
+        var tr = document.createElement("tr")
+        tr.append(tdDate, tdDesc, tdAmount)
+        table.append(tr)
+    }
+    putData();
+    function search(){
+        var table =document.getElementById('getData')
+        table.innerHTML = null;
+        if (document.getElementById('money').value=="all") putData();
+        if (document.getElementById('money').value== "debit") putDebit();
+        if (document.getElementById('money').value== "credit") putCredit();
+        
+    }
+    function userName() {
+            var data = JSON.parse(localStorage.getItem("currentuser"))
+            console.log(data[2])
+
+            document.getElementById("nameUser").innerText = data[2]
+            document.getElementById("userEmail").innerText = data[0]
+        }
+        userName()
+</script>

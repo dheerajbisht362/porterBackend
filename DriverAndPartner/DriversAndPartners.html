@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Come Join Us! Attach your mini truck or bike with Porter</title>
+    <link rel="stylesheet" href="DriversAndPartners.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajx/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/133eda6a97.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="form-popup" id="myForm">
+      <div id="inlinedp0029">
+        <div class="extra10">
+         <div><i class="fas fa-laptop"></i>Manage your trips</div>
+         <div><i class="fas fa-search-location"></i>Track your expenses</div> 
+         <div><i class="fas fa-file-invoice"></i>Generate Invoice</div>
+        </div>
+        <div>
+          <form class="form-container" id="loginData">
+            <button class="cross" onclick="closeForm()">X</button>
+            <h3 class="formHead"> Customer Login </h3>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email or mobile" id="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+          
+            <button type="submit" onclick=" validateMyForm()" class="btn">NEXT</button>
+          
+          </form>
+        </div>
+        </div>
+    </div>
+    <div id="main-container">
+      <div class="header">
+        <div class="header-wrapper">
+          <div class="header-container">
+            <div class="logo-container">
+              <a class="link" href="../home.html">
+                <div><img src="../images/1.png" alt="" class="logoicon"></div>
+              </a>
+
+              <div class="heading1">
+                India's Largest Marketplace for Intracity Logistics
+              </div>
+            </div>
+
+            <div class="right-side-header">
+              <div class="drive-contact">
+                <a class="join-drive" href="DriversAndPartners.html">
+                  <img class="driver-logo" src="../images/2.png" alt="driver" />
+                </a>
+                <div class="contactnumber">
+                  <div class="number">4410-4410</div>
+                  <div class="descripation">add your city code</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="navbar">
+            <div class="navbar-content">
+              <div class="navarcontainer">
+                <div class="navbar-links">
+                  <a class="link" href="../home.html">CITY TEMPO</a>
+                  <a class="link" href="../PackersAndMover/packer&Movers.html">PACKERS & MOVERS</a>
+                  <a class="link" href="DriversAndPartners.html">DRIVER PARTNER</a>
+                  <a class="link" href="../ForEnterprise/forEnterprises.html">FOR ENTERPRISE</a>
+                                         
+                  <div class="navbar-secondlinks">
+                    <button onclick="openForm()" class="border01">Login</button>
+                    <a class="link1" href="#support">Support</a>
+                    <a class="link1" >Track Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="banner-container">
+        <div>
+          <img class="banner-img" src="../images/dfa3321.jpg" alt="banner" >
+            <!-- intro text on banner starts -->
+          <h1 class="heading"><div class="deskbannerTitle">Attach mini trucks or bike</div></h1>
+          <div class="sub-sub-heading">Earn money by delivering goods, courier and packages. Get a part or full time delivery job</div>
+              <!-- banner text end -->
+        </div>
+      </div>
+      <div class="form-text">
+        <form id="inlinedp001">
+          <div class="form-heading">Attach Vehicle Now</div>
+           
+          
+          <div id="fillup">
+            <input type="text" id="name" class="form-control" placeholder="Name" >
+            <input type="text" id="contact" class="form-control" placeholder="+91 -">
+      
+            <div id="inlinedp0030">
+              <select id="city" class="form-control_2" placeholder="CITY">
+                  <option value="India" >CITY</option>
+                  <option value="India" >MUMBAI</option>
+                  <option value="USA" >DELHI NCR</option>
+                  <option value="China" >BANGALORE</option>
+                  <option value="Nepal" >HYDERABAD</option>
+                  <option value="Australia" >CHENNAI</option>
+                  <option value="France" >AHMEDABAD</option>
+                  <option value="Germany" >JAIPUR</option>
+                  <option value="South-Africa" >PUNE</option>
+                  <option value="Nigeria" >KOLKATA</option>
+                  <option value="Mexico" >SURAT</option>
+                  <option value="Argentina" >LUCKNOW</option>
+                  <option value="Brazil" >JAIPUR</option>
+                  
+              </select>
+                       
+              <select id="city_2" class="form-control_3" placeholder="SELECT VEHICLE">
+                 
+                  <option value="India" >RENTAL</option>
+                  <option value="USA" >PORTER HIRE</option>
+                  <option value="China" >3 WHEELER MINI</option>
+                  <option value="Nepal" >TATA 407 14FT </option>
+                  <option value="Australia" >CANTER / 14FT OUT</option>
+                  <option value="France" >PICKUP / 8FT-OUT</option>
+                  <option value="Germany" >TATA ACE-OUTSTATE</option>
+                  <option value="South-Africa" >TATA ACE</option>
+                  <option value="Nigeria" >PICKUP / 8FT</option>
+                  <option value="Mexico" >3 WHEELER</option>
+                  <option value="Argentina" >ACE HELPER</option>
+                  <option value="Brazil" >2 WHEELER</option>
+                  <option value="Canada" >EECO</option>
+                  <option value="Singapore" >CHAMPION</option>
+                  <option value="Sweden" >CHAMPION HELPER</option>
+                  <option value="Sweden" >EECO-OUTSTATION</option>
+                  <option value="Sweden" >OTHERS</option>
+              </select>
+      
+           
+              <div id="inlinedp0031" ></div>
+              <select class="form-control_4" placeholder="TATA ACE">
+                <option value="India" >WHERE DID YOU HEAR ABOUT US?</option>
+                <option value="India" > BUS ADS</option>
+                <option value="USA" >PAMPHLET</option>
+                <option value="China" >GARAGE HOARDING</option>
+                <option value="Nepal" >NEWSPAPER ADS</option>
+                <option value="Australia" >DRIVER REFERRAL</option>
+                <option value="France" >CUSTOMER REFERRAL</option>
+                <option value="Germany" >CHANNEL PARTNER</option>
+                <option value="South-Africa" >OTHERS</option>
+                <option value="Nigeria" >FOS</option>
+                <option value="Mexico" >ONLINE/FACEBOOK</option>
+                <option value="Argentina" >SMART SHIFT</option>
+              </select>
+      
+            </div>
+          </div>
+          <div id="btn">
+            <button onclick="sumbit">REGISTER</button>
+          </div>
+        </form>
+        <div id="inlinedp002">
+          <h2 >Start Earning Immediately</h2>
+         <p >Download the partner app and register</p>
+          <a href="https://play.google.com/store/apps/details?id=com.theporter.android.driverapp&referrer=web_tracking_id%253D48b17d17b10c30f06830cac21d69e36b">
+            <img id="inlinedp003" src="../images/3.png" alt="">
+          </a>
+        </div>
+      </div>
+        <!-- intro text on banner end -->
+          <!-- Porter Advantage Section-->
+      <div class="banner-footer">
+        <h2 class="heading2">PORTER ADVANTAGE</h2>
+        <div><input type="button" class="btn_2"></div>
+        <div class="imagebanner">
+          <div class="features">
+            <img class="img" src="../images/5.png" alt="budget">
+            <div class="title">Regular Trips</div>
+            <div class="sub-title">With our growing presence across <br>  multiple cities, we always have our  <br>  hands full! This means you will never  <br>  run out of trips.</div>
+          </div>
+      
+          <div class="features">
+            <img class="img" id="box-img" src="../images/6.png" alt="box">
+            <div class="title">Better Earning</div>
+            <div class="sub-title">Earn more by partnering with the best!  <br>  Regular trips and efficient service can <br>   grow your earnings!</div>
+          </div>
+      
+          <div class="features">
+            <img class="img" src="../images/7.png" alt="budget">
+            <div class="title">On-Time Payment</div>
+            <div class="sub-title">Be assured to receive all payments on  <br>  time & get the best in class support,  <br>  when you attach mini truck with  <br>  Porter.</div>
+          </div>
+      
+        </div>
+      </div>
+          <!-- image text detail ends -->
+           <!-- first skew and content starts  -->
+      <div class="container-info">
+        <div class="info-title">
+            <div class="title2">MAKING YOUR LIFE EASY</div>
+            <div class="barline";"></div>
+            <div class="info-wrapper">
+              <div class="skew">
+                <div class="image_A"> <img id="inlinedp006" src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/website_revamp/partners/driver_experience-87051334459376357b6125e2b776e61175461d3db60f2a5fdad972d51839137e.gif" alt="" >
+                </div>
+                <div class="cont_1">
+                  <div class="font">Attach your two wheeler or commercial vehicle   </div>
+                  <div class="font_2">If you got a 2 wheeler, or a tata ace commercial vehicle, you are good to go! With <br>  Porter, get a delivery job and deliver goods, packages, and courier.</div>
+                  <div class="inlinedp004" >No more waiting on the stand</div>
+                  <div class="font_2">Attach tata ace with Porter to have a steady stream of trips with minimum assured<br>income and added incentives, so that there is no waiting and idle time at the stand!</div>
+                  <div class="inlinedp004" >No more bargaining. Standard Rates</div>     
+                  <div class="font_2">The rates and calculation methods are standardized and completely transparent. <br> No more wasting time in fixing the rates for every trip.</div>     
+                  <div class="inlinedp004" >Hassle Free Navigation</div>
+                  <div class="font_2">With our GPS-based navigation you can drive anywhere across your city without <br> worrying about the directions. Get real-time navigation assistance on the go!</div> 
+                </div>
+              </div>
+            </div>
+        </div>
+          <!-- first skew and content ends  -->
+        <div>
+          <div class="container-info2">
+            <div class="skew2" id="inlinedp005"></div>       
+          </div>
+        </div>
+      </div>
+        <!-- making your life easy ends -->
+
+      <div class="banner-footer" id="inlinedp007">
+        <h2 class="heading_3" id="inlinedp008" >ADDITIONAL BENEFITS</h2>
+        <div><input type="button" class="btn_2" id="inlinedp009"></div>
+          <div class="imagebanner" id="inlinedp0010">
+            <div class="features">
+                  <img class="img" src="../images/8.png" alt="budget">
+                  <div class="title">Health Care Assistance</div>
+                  <div class="sub-title">Get healthcare benefits for you and <br> your family with mini truck <br>attachment.</div>
+            </div>     
+            <div class="features">
+                  <img class="img" id="box-img" src="../images/9.png" alt="box">
+                  <div class="title">Discount on Insurance</div>
+                  <div class="sub-title">Save money with reduced annual <br> maintenance and insurance costs on   <br> your vehicle.</div>
+            </div>
+            <div class="features">
+                  <img class="img" src="../images/10.png" alt="budget">
+                  <div class="title">Fuel card for Savings</div>
+                  <div class="sub-title">Save big on fuel costs with our smart <br> fuel card and increase your profit <br> margins!</div>
+            </div>    
+            <div class="features" >
+                  <img class="img" src="../images/11.png" alt="budget">
+                  <div class="title">Discount on Vehicle Purchase</div>
+                  <div class="sub-title">Get major discounts on purchase of <br> new vehicles. Add to your fleet and <br> grow your business!</div>
+            </div>
+           </div>
+      </div>
+      
+      <!-- changing peoples life  -->
+      <div>
+        <div class="skew_3"></div>   
+        <div class="container-info2">      
+          <div>
+            <input type="button" class="btn_2" id="inlinedp0011">
+            <h2 class="heading_3" id="inlinedp0012">CHANGING LIFE OF PEOPLE</h2>
+          </div>
+          <div class="deskGrowing">  
+            <div class="growingDiv">
+              <div class="proCont">
+                <div class="colored_1"></div>
+                <div class="para">“Getting business at vehicle stand has become very tough today due to intense competition. But with Porter's partner driver app, transparent fare structure and standard pricing, my life has become easier. Now I don't worry about finding customers and getting payments.”</div>
+                <img src="../images/15.png" alt="person_1" id="inlinedp0013"  >
+                <div class="colored"></div>
+              </div>
+      
+              <div class="proCont">
+                <div class="colored_1"></div>
+                <div class="para">“Earlier there were many restrictions on earnings because I got limited trips in market which were only from my known customers and to nearby places. I gave my truck on rent with Porter there are no such restrictions, there are a lot of orders throughout city. I enjoy being a part of Porter family.”</div>
+                 <img src="../images/16.png" alt="person_1" id="inlinedp0014" >
+                <div class="colored"></div>
+              </div>
+      
+              <div class="proCont">
+                <div class="colored_1"></div>
+                <div class="para">“I was new to Chennai and went ahead to attach my tata ace with Porter. Porter app's inbuilt map and navigational capability never made me feel new to city. Payment is done on time and their vendor helpdesk provides immediate solutions to all my issues.”</div>
+                <img src="../images/17.png" alt="person_1" id="inlinedp0015">
+                <div class="colored"></div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+          <!-- Own multiple vehicle -->
+      <div>
+        <h2 class="heading_3" id="inlinedp0016">OWN MULTIPLE VEHICLES?</h2> 
+        <input type="button" class="btn_2" id="inlinedp0017">
+        <div></div>
+        <img id="inlinedp0018"  src="../images/owner_banner-54b9b6782f153807bff15a9a99b323d4580b76636f981cf.png" alt="ownerBanner"   class="Image_c" >
+        <div id="inlinedp0019" >  
+          <h4 id="inlinedp0032">If you are a fleet owner and own multiple vehicles.</h4>
+        </div>
+      
+        <div class="font_3">
+          <p>Keeping track of your vehicle fleet and optimising their efficiency can be a <br> huge challenge. Partner with Porter to boost your earnings and manage  <br> your vehicles easily.
+          </p>
+        </div> 
+        <a href=""><img src="../images/18.png" alt="contact us" class="image_Co"></a>
+      </div>
+     
+      <div class="faqmain">
+        <div class="ques">
+          <p>FREQUENTLY ASKED QUESTIONS</p>
+          <input type="button" class="btn_2" style="margin-left: 300px;">
+          <div class="question">
+            <p class="bt-0">
+              <a href="javascript:toggleElement('q1')" id="q1Col">How to attach Tata ace or any goods vehicle in Porter?</a>
+            </p>
+            <div id="q1" class="dis_none">
+              Becoming a Porter partner and attaching your truck with us is a very easy process. You can do it with three easy
+              steps from the comfort of your home!
+              <ol>
+                <li> Download the Porter Partner Driver App</li>
+                <li>Register with us and submit all your documents within the app.</li>
+                <li>Once the documents are verified do a dummy order.</li>
+              </ol>
+              You will start getting trips immediately.
+            </div>
+            <p>
+              <a href="javascript:toggleElement('q2')" id="q2Col">How to attach two wheeler in Porter?</a>
+            </p>
+            <div id="q2" class="dis_none">
+              Get a bike delivery job in 3 easy steps!
+              <ol>
+                <li>Download the Porter Partner Driver App</li>
+                <li> Register with us and submit all your documents within the app.</li>
+                <li>Once the documents are verified do a dummy order.</li>
+              </ol>
+            </div>
+            <p>
+              <a href="javascript:toggleElement('q3')" id="q3Col">Can I attach my tata ace on a monthly contract or rent mini
+                trucks on monthly basis?</a>
+            </p>
+            <div id="q3" class="dis_none">
+              You can attach your commercial vehicle to Porter on a daily, weekly or monthly basis for a part-time or
+              full-time engagement.
+            </div>
+      
+            <p>
+              <a href="javascript:toggleElement('q4')" id="q4Col">What documents and permits do I need to on-board Porter?</a>
+            </p>
+      
+            <div id="q4" class="dis_none">
+              For commercial vehicle attachment following documents are required: RC book | Fitness certificate | Insurance |
+              Pollution Control | Owner/Driver documents : Driving License | PAN card | Bank Details | Address Proof
+            </div>
+      
+      
+            <p>
+              <a href="javascript:toggleElement('q5')" id="q5Col">Is there any registration fee to join Porter?</a>
+            </p>
+            <div id="q5" class="dis_none">
+              Porter charges nominal fees at the time of on-boarding for vehicle attachment. Fee varies as per the vehicle
+              type.
+            </div>
+      
+      
+      
+            <p>
+              <a href="javascript:toggleElement('q6')" id="q6Col">Is there any registration fee to join Porter?</a>
+            </p>
+            <div id="q6" class="dis_none">
+              Porter charges nominal fees at the time of on-boarding for vehicle attachment. Fee varies as per the vehicle
+              type.
+            </div>
+      
+      
+      
+      
+            <p>
+              <a href="javascript:toggleElement('q7')" id="q7Col">Which type of vehicle one can attach to Porter?</a>
+            </p>
+            <div id="q7" class="dis_none">
+              You can attach 2 wheelers such as bike and scooter, and commercial vehicles with carrying capacity of 1 ton, 2
+              ton, and 3 ton for our On Demand Services.
+            </div>
+      
+      
+      
+      
+      
+            <p>
+              <a href="javascript:toggleElement('q8')" id="q8Col">How much can you earn in Porter's mini truck & bike delivery
+                job?</a>
+            </p>
+            <div id="q8" class="dis_none">
+              Porter has served more than a million customers so far. When you enroll as Porter Partner you get regular trips
+              from this wide & ever-growing customer base.
+            </div>
+      
+      
+      
+      
+            <p>
+              <a href="javascript:toggleElement('q9')" id="q9Col">How much you can earn per week?</a>
+            </p>
+            <div id="q9" class="dis_none">
+              Your earnings are dependent on the time you spend on Porter platform. Longer engagement with the platform lead
+              to more trips which in turn ensures high earning.
+            </div>
+      
+      
+      
+      
+            <p>
+              <a href="javascript:toggleElement('q10')" id="q10Col">How I can check my earning & payouts?</a>
+            </p>
+            <div id="q10" class="dis_none">
+              Porter has an advanced driver app which provides all details pertaining to daily earning and weekly payouts.
+            </div>
+      
+      
+      
+            <p>
+              <a href="javascript:toggleElement('q11')" id="q11Col">Can I refer my friends and colleagues to join Porter?</a>
+            </p>
+            <div id="q11" class="dis_none">
+              Yes! We encourage our driver partners to promote Porter among their peers and refer them to join us. In return
+              they deserve a goodwill bonus on each successful on-boarding of all vehicle types with carrying capacity of 1
+              ton, 2 ton and 3 ton.
+            </div>
+      
+      
+            <p>
+              <a href="javascript:toggleElement('q12')" id="q12Col">I have a query. How I can get in touch with Porter?</a>
+            </p>
+            <div id="q12" class="dis_none">
+              For any query, you can visit our nearest local office or reach out to us at 4410 4410 (add your city code).
+            </div>
+      
+      
+      
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footerFirst">
+            <div class="footerSec" id="inlinedp0023" >
+                <div><a href="../home.html"><img src="../images/footerLogo.png" /></a></div>
+                <div id="inlinedp0024">CIN: U74999MH2014PTC306120</div>
+                <div id="inlinedp0025">
+                    <p class="footerTitle socialGap">GO SOCIAL</p><a><i class="fa fa-facebook fa-2x"></i></a><a><i
+                            class="fa fa-linkedin fa-2x"></i></a><a><i class="fa fa-twitter fa-2x"></i></a><a><i
+                            class="fa fa-youtube fa-2x"></i></a><a><i class="fa fa-instagram fa-2x"></i></a></a>
+                </div>
+            </div>
+            <div class="footerSec">
+                <p class="footerTitle">COMPANY</p>
+                <p>About Us</p>
+                <p>Offers</p>
+                <p>Careers</p>
+                <p>Blog</p>
+            </div>
+            <div class="footerSec">
+                <p class="footerTitle">SUPPORT</p>
+                <p>Help Centre</p>
+                <p>Privacy Policy</p>
+                <p>Terms of seervice</p>
+                <p>Insaurance FAQs</p>
+            </div>
+            <div class="footerSec">
+                <p class="footerTitle">DISCOVER PORTER</p>
+                <p>Trucks in Bangalore</p>
+                <p>Trucks in Mumbai</p>
+                <p>Trucks in Delhi NCR</p>
+                <p>Trucks in Chennai</p>
+                <p>Trucks in Hyderabad</p>
+                <p>Trucks in Ahmedabad</p>
+                <p>Trucks in Pune</p>
+                <p>Trucks in Surat</p>
+                <p>Trucks in Kolkata</p>
+                <p>Trucks in JAIPUR</p>
+                <p>Trucks in Lucknow</p>
+            </div>
+            <div class="footerSec">
+                <p class="footerTitle">BOOK A TRUCK</p>
+                <p>City Tempo</p>
+                <p>For Enterprise</p>
+                <p>Packers & Movers</p>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p id="inlinedp0027">Download our app</p> <img id="inlinedp0026" src="../images/footerAppStore.jpg"
+                 />
+            <p id="inlinedp0028">©
+                2021 SmartShift Logistics Solutions Pvt. Ltd. All rights reserved</p>
+        </div>
+  
+      </div>
+    </div>
+   </body>
+</html>
+
+
+ <script src="login.js"></script> 
+

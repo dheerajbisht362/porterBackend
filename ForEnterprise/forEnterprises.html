@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>On Demand delivery</title></head>
+    <link rel="stylesheet" href="forEnterprises.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        
+    </style>
+    <body>
+        <div id="root">
+            <div class="forEnt">
+                <div class="header">
+                    <div class="header-wrapper">
+                        <div class="header-container">
+                            <div class="logo-container">
+                                <a class="link" href="../home.html">
+                                    <div class="logoicon" id="inlinefe001" ></div>
+                                </a>
+                    
+                                <div class="heading1">
+                                    India's Largest Marketplace for Intracity Logistics
+                                </div>
+                            </div>
+                    
+                            <div class="right-side-header">
+                                <div class="drive-contact">
+                                    <a class="join-drive" href="../DriverAndPartner/DriversAndPartners.html">
+                                        <img class="driver-logo" src="../images/2.png" alt="driver" />
+                                    </a>
+                                    <div class="contactnumber">
+                                        <div class="number">4410-4410</div>
+                                        <div class="descripation">add your city code</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="navbar">
+                            <div class="navbar-content">
+                                <div class="navarcontainer">
+                                    <div class="navbar-links">
+                                        <a class="link" href="../home.html">CITY TEMPO</a>
+                                        <a class="link" href="../PackersAndMover/packer&Movers.html">PACKERS & MOVERS</a>
+                                        <a class="link" href="../DriverAndPartner/DriversAndPartners.html">DRIVER PARTNER</a>
+                                        <a class="link" href="forEnterprises.html">FOR ENTERPRISE</a>
+                    
+                                        <div class="navbar-secondlinks">
+                                            <a class="link1" href="#support">Support</a>
+                                            <a class="link1" href="#trackmore" id="inlinefe0012">
+                                                <b>Track Order</b>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="wdeskfoeEntContainer" id="wdeskentCont">
+                        <div class="deskforEntContainer">
+                            <div class="deskforEntContainerBanner">
+                                <div class="deskbanner">
+                                    <img class="deskbannerImg" src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/fa5a792e1046725074cf1178cbef248d.webp"/>
+                                    <div class="deskbannerTitle">Transform your Enterprise Business with Porter Deliveries</div>
+                                </div>
+                            </div>
+                            <form class="form-text" id="form01">
+                                <div class="form-heading">FOR ENTERPRISES</div>
+                                <!-- <label for ="city"></label> -->
+                                <div id="fillup">
+                                    <!-- <input type="text" id="city" class="form-control" placeholder="Select City" name="city"> -->
+                                    <select name="city" id="city" class="form-control" placeholder="Select Cities">
+                                        <option value="">Select City</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Delhi NCR">Delhi NCR</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Jaipur">Jaipur</option>
+                                        <option value="Ahmedabad">Ahmedabad</option>
+                                        <option value="Pune">Pune</option>
+                                    </select>
+                                    </input>
+                                    <input type="text" id="name" class="form-control" placeholder="Contact Person">
+                                    <input type="text" id="company" class="form-control" placeholder="Company Name">
+                                    <input type="text" id="contact" class="form-control" placeholder="+91 -">
+                                    <!-- <input type="text" id="trips" class="form-control" placeholder="Monthly Trips"> -->
+                                    <select name="trips" id="trip" class="form-control">
+                                        <option value="" id="inlinefe0013">Monthly Trips</option>
+                                        <option value="None">None</option>
+                                        <option value="0-50">0-50</option>
+                                        <option value="50-100">50-100</option>
+                                        <option value="More than 100">More than 100</option>
+                                    </select>
+                                    <input type="text" id="email" class="form-control" placeholder="Email address">
+                                    <input type="text" id="desig" class="form-control" placeholder="Contact Designation">
+                                </div>
+                                <div id="btn">
+                                    <button onclick="sumbitForm()">REQUEST CALLBACK</button>
+                                </div>
+                            </form>
+                            <div class="popUp" id="hide01">
+                                <p>Thank you for contacting us</p>
+                                <p id="bold02">Porter</p>
+                                <p>We will get back to you shortly</p>
+                            </div>
+
+                                <div class="DeskfeaturesContainer">
+                                    <div class="titleFC">Why Use Porter for Enterprise?</div>
+                                    <div class="bar"></div>
+                                    <div class="featureContainer">
+                                        <div class="cmnFeatureCont">
+                                            <div class="indivFeatures">
+                                                <div class="imgPayPer"><img src="../images/icon1.png" /></div>
+                                                <div class="featureInfo">
+                                                    <h3 class="title">Pay per Use</h3>
+                                                    <div class="info">No fixed monthly contracts. Pay only for the time & distance you use.</div>
+                                                </div>
+                                            </div>
+                                            <div class="indivFeatures">
+                                                <div class="imgPayPer"><img src="../images/icon2.png" /></div>
+                                                <div class="featureInfo">
+                                                    <h3 class="title">Greater Control</h3>
+                                                    <div class="info">Get visibility of all your hub level logistics movement.</div>
+                                                </div>
+                                            </div>
+                                            <div class="indivFeatures">
+                                                <div class="imgPayPer"><img src="../images/icon3.png" /></div>
+                                                <div class="featureInfo">
+                                                    <h3 class="title">Hassle Free Accounting</h3>
+                                                    <div class="info">Get rid of order level payment & reimbursement.Pay centrally for Pan India usage.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="deskExp">
+                                    <div class="expnInfo">
+                                        <div class="title">OUR GROWING NETWORK</div>
+                                        <div class="bar"></div>
+                                        <div class="expnData">
+                                            <div class="expnDataDiv">
+                                                <div class="expnsData">
+                                                    <div class="heading">9</div>
+                                                    <div class="desc">CITIES</div>
+                                                </div>
+                                                <div class="expnsData">
+                                                    <div class="heading">2000+</div>
+                                                    <div class="desc">VEHICLE BASE</div>
+                                                </div>
+                                                <div class="expnsData">
+                                                    <div class="heading">500+</div>
+                                                    <div class="desc">DRIVER PARTNER</div>
+                                                </div>
+                                                <div class="expnsData">
+                                                    <div class="heading">60,000+</div>
+                                                    <div class="desc">TRIPS PER MONTH</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="discription">
+                                            "Our business is growing by the minute! We are now present in eight cities and have an extensive fleet base
+                                            of 2000 plus
+                                            vehicles. We run more than 60,000 trips in a month! Our loyal customers across 8 cities serve as a testament
+                                            of our top
+                                            notch service and ever expanding presence."
+                                        </div>
+                                    </div>
+                                    <div class="mapInd"><img src="../images/india.svg" /></div>
+                                </div>
+                                        <!-- <div class="discription">
+                                            Our business is growing by the minute! We are now present in eight cities and have an extensive fleet base of 2000 plus
+                                            vehicles. We run more than 60,000 trips in a month! Our loyal customers across 8 cities serve as a testament of our top
+                                            notch service and ever expanding presence.
+                                        </div>
+                                        
+                                    </div> -->
+                                    
+                                </div>
+                                <div class="deskGrowing">
+                                    <div class="title">GROWING BUSINESS</div>
+                                    <div class="bar"></div>
+                                    <div class="growingDiv">
+                                        <div class="proCont">
+                                            <div class="para">“Porter has emerged as a very reliable logistics provider and has provided us with a good option to scale with better SLAs.”</div>
+                                            <div class="para2">Logistics Manager</div>
+                                            <div class="para3">at a Leading FMCG MNC</div>
+                                            <div class="colored"></div>
+                                        </div>
+                                        <div class="proCont">
+                                            <div class="para">“They helped us with ground level sensitivity on vehicle utilisation. Their gps tracking system helped us ensure
+                                            delivery in time and detect inefficiencies.”</div>
+                                            <div class="para2">CEO</div>
+                                            <div class="para3">of an Ecommerce company</div>
+                                            <div class="colored"></div>
+                                        </div>
+                                        <div class="proCont">
+                                            <div class="para">“We had introduced Porter in Mumbai for our fleet, they performed beyond expectations in terms of vehicle deployment and
+                                            helped us scale at a much faster rate. This was done with complete visibility of service data on daily basis which
+                                            helped understand the problems and immediate rectification of problems.”</div>
+                                            <div class="para2">Logistics Head</div>
+                                            <div class="para3">at a Manufacturing plant</div>
+                                            <div class="colored"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="deskIndust">
+                                    <div class="heading">
+                                        <div class="title">INDUSTRIES</div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="industCont">
+                                        <div class="indImg">
+                                            <picture>
+                                                <img class="imgIndus" src="https://d35ppnqksufxmo.cloudfront.net/frontend_website/fd047a61e3a256afcfb16f1f3227239a.webp" alt="industryImage">
+                                            </picture>
+                                        </div>
+                                        <div class="inform">
+                                            <div class="discript">The expertise and experience we have in handling a wide range of goods makes us the market leader in logistics! We
+                                            transport anything and everything ranging from timber to fruits and vegetables, FMCG to pharmacy and medical supplies.
+                                            Other goods we transport include frozen and processed foods, e-commerce related merchandise and electronic goods.</div>
+                                            <div class="tableB">
+                                                <div class="tableB1">
+                                                    <div class="indusEn">
+                                                        <div class="wrapLeft">
+                                                            <div class="bsLeft">ELECTRONICS & APPLIANCES</div>
+                                                        </div>
+                                                        <div class="wrapRight">
+                                                            <div class="bsRigt">FURNITURE</div>
+                                                        </div>
+                                                        <div></div>
+                                                    </div>
+                                                    <div class="indusEn">
+                                                        <div class="wrapLeft">
+                                                            <div class="bsLeft">CHEMICALS & PHARMACEUTICALS</div>
+                                                        </div>
+                                                        <div class="wrapRight">
+                                                            <div class="bsRigt">CONSTRUCTION MATERIALS</div>
+                                                        </div>
+                                                        <div class="seprt"></div>
+                                                    </div>
+                                                    <div class="indusEn">
+                                                        <div class="wrapLeft">
+                                                            <div class="bsLeft">F&Vs & PROCESSED FOODS</div>
+                                                        </div>
+                                                        <div class="wrapRight">
+                                                            <div class="bsRigt">E-COMMERCE</div>
+                                                        </div>
+                                                        <div class="seprt"></div>
+                                                    </div>
+                                                    <div class="indusEn">
+                                                        <div class="wrapLeft">
+                                                            <div class="bsLeft">COURIERS & LOGISTICS</div>
+                                                        </div>
+                                                        <div class="wrapRight">
+                                                            <div class="bsRigt">FMCG</div>
+                                                        </div>
+                                                        <div class="seprt"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="queryContainer">
+                                    <div class="queryimg"></div>
+                                    <div class="queryInfo">
+                                        <div class="title">FOR ANY MORE QUERY</div>
+                                        <div class="bar"></div>
+                                        <div class="queryPara">
+                                            <div class="paraQ">Reach us out on</div>
+                                            <div class="paraQnum">9667309777</div>
+                                            <div class="paraQ">today to know more aboutus and get benefits</div>
+                                            <div class="paraQ">from our managed services offering. Our expert team will be happy to know more about your business and recommend the
+                                            best possible solutions tailored to your logistics needs</div>
+                                        </div>
+                                        <div class="reBtn">REQUEST CALLBACK</div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Start -->
+
+                                <div class="ecFaq">
+                                    <div class="faqDiv">
+                                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjBweCIgaGVpZ2h0PSI1NHB4IiB2aWV3Qm94PSIwIDAgNjAgNTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ3LjEgKDQ1NDIyKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Hcm91cEAxeDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIiBpZD0ibGluZWFyR3JhZGllbnQtMSI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiMyOTYyRkYiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzVFMEJFMCIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJIb21lIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iaG9tZV9sYW5kaW5nLWNvcHkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNDcuMDAwMDAwLCAtNTc2NC4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDcuMDAwMDAwLCA1NzY0LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTU5LjAyMzI1NTgsNy4wNjM0ODA2NCBMNTkuMDIzMjU1OCwyMy42MDczMjEzIEM1OS4wMjMyNTU4LDI3LjUyNDQwMDMgNTUuODk2MTYxNCwzMC43MDI5NzQ3IDUxLjk5NjIzNjQsMzAuNzAyOTc0NyBMMzMuMDE4MjI3MiwzMC43MDI5NzQ3IEMzMi42NDcxNzc0LDMwLjcwMjk3NDcgMzIuMzQxNjU0OCwzMC43MDA4NTE3IDMyLjA4NjA1LDMwLjY5NTQ2MjMgQzMxLjgxODI1MDIsMzAuNjg5OTA5NiAzMS41MTY3OTI2LDMwLjY4Nzc4NjYgMzEuMzk5MjMzOSwzMC43MDA4NTE3IEMzMS4yNzY3OTcyLDMwLjc4MjUwODUgMzAuOTc2NjQwNCwzMS4wNTg2NzIgMzAuNjg3Mzc3NywzMS4zMjYzNDMxIEMzMC41NzI3NDU3LDMxLjQzMjMzMzcgMzAuNDQyOTkyMSwzMS41NDg5Mzk3IDMwLjMwMjk5NDgsMzEuNjc3MzA0MiBMMjQuOTMzNjY3MSwzNi41OTI3MTk4IEMyNC41MDUzODI3LDM2Ljk4NTE2MjYgMjMuODcxNzM2MywzNy4wODY3NDM4IDIzLjM0MTM0LDM2Ljg1MTg5ODcgQzIyLjgxMDk0MzcsMzYuNjE2ODkwMyAyMi40Mzg1OTMxLDM2LjA4OTM4NyAyMi40Mzg1OTMxLDM1LjUwNzE3MzcgTDIyLjQzODU5MzEsMTkuOTI0MjcwOCBMNy4xMDg4MDY0NiwxOS45MjQyNzA4IEM0LjgyMjM0NjM0LDE5LjkyNDI3MDggMi45MjY3NzMwMiwyMS44MDYxMzQ1IDIuOTI2NzczMDIsMjQuMTAyMzI1MSBMMi45MjY3NzMwMiw0MC42NDYxNjU4IEMyLjkyNjc3MzAyLDQyLjk0MjUxOTYgNC44MjI1MDg5NCw0NC43NDc5NTI1IDcuMTA4ODA2NDYsNDQuNzQ3OTUyNSBMMjguMzA3NDIzNCw0NC43NDc5NTI1IEMyOC42NzI0NTcsNDQuNzQ3OTUyNSAyOS4wMTM5MTM5LDQ0LjkxNjMyOSAyOS4yODM1MDIyLDQ1LjE2MzU4NTkgTDMzLjY1Nzg4OTcsNDkuMjE0NDE4OCBMMzMuNjU3ODg5NywzNS4yNDQ3Mjg2IEMzMy42NTc4ODk3LDM0LjQzMjg5NjIgMzQuMzEyOTk5LDMzLjc3NDkwNTMgMzUuMTIxMjc2MiwzMy43NzQ5MDUzIEMzNS45Mjk1NTMzLDMzLjc3NDkwNTMgMzYuNTg0NjYyNywzNC40MzI4OTYyIDM2LjU4NDY2MjcsMzUuMjQ0NzI4NiBMMzYuNTg0NjYyNyw1Mi41NDU4NTQ5IEMzNi41ODQ2NjI3LDUzLjEyODA2ODIgMzYuMjUyOTYxOCw1My42NDc3MzI0IDM1LjcyMjQwMjgsNTMuODgyNzQwOCBDMzUuNTMyNjUwNCw1My45NjY4NDczIDM1LjM0MjA4NSw1NCAzNS4xNDI1NzY2LDU0IEMzNC43ODQyMDk1LDU0IDM0LjQzMDcyMDQsNTMuODUyMjAxMSAzNC4xNTU3NjYzLDUzLjYwMDA0NDggTDI3Ljc0MDExNzIsNDcuNjg3NDM1NyBMNy4xMDg4MDY0Niw0Ny42ODc0MzU3IEMzLjIwODcxODgyLDQ3LjY4NzQzNTcgMCw0NC41NjMyNDQ3IDAsNDAuNjQ2MDAyNCBMMCwyNC4xMDIzMjUxIEMwLDIwLjE4NTI0NjEgMy4yMDg3MTg4MiwxNi45ODQ2MjQzIDcuMTA4ODA2NDYsMTYuOTg0NjI0MyBMMjIuNDM4NTkzMSwxNi45ODQ2MjQzIEwyMi40Mzg1OTMxLDcuMDYzNDgwNjQgQzIyLjQzODU5MzEsMy4xNDYyMzgzNCAyNS42NzE4NjQzLDAgMjkuNTcxOTUyLDAgTDUxLjk5NjM5OSwwIEM1NS44OTYxNjE0LDAgNTkuMDIzMjU1OCwzLjE0NjIzODM0IDU5LjAyMzI1NTgsNy4wNjM0ODA2NCBaIiBpZD0iU2hhcGUiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMSkiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTExLjI1MjA5MywzMC4xMzk1MzQ5IEMxMC41ODYyMTAyLDMwLjEzOTUzNDkgMTAuMDQ2NTExNiwzMC43MDE3MjA5IDEwLjA0NjUxMTYsMzEuMzk1MzQ4OCBDMTAuMDQ2NTExNiwzMi4wODg5NzY3IDEwLjU4NjIxMDIsMzIuNjUxMTYyOCAxMS4yNTIwOTMsMzIuNjUxMTYyOCBMMTEuMzUyNTU4MSwzMi42NTExNjI4IEMxMi4wMTg0NDA5LDMyLjY1MTE2MjggMTIuNTU4MTM5NSwzMi4wODg5NzY3IDEyLjU1ODEzOTUsMzEuMzk1MzQ4OCBDMTIuNTU4MTM5NSwzMC43MDE3MjA5IDEyLjAxODQ0MDksMzAuMTM5NTM0OSAxMS4zNTI1NTgxLDMwLjEzOTUzNDkgTDExLjI1MjA5MywzMC4xMzk1MzQ5IFoiIGlkPSJQYXRoIiBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTEpIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTUuMDE5NTk5MiwzMC4xMzk1MzQ5IEMxNC4zNTM2ODA5LDMwLjEzOTUzNDkgMTMuODEzOTUzNSwzMC43MDE3MjA5IDEzLjgxMzk1MzUsMzEuMzk1MzQ4OCBDMTMuODEzOTUzNSwzMi4wODg5NzY3IDE0LjM1MzY4MDksMzIuNjUxMTYyOCAxNS4wMTk1OTkyLDMyLjY1MTE2MjggTDE1LjExOTkzNTcsMzIuNjUxMTYyOCBDMTUuNzg1ODU0LDMyLjY1MTE2MjggMTYuMzI1NTgxNCwzMi4wODg5NzY3IDE2LjMyNTU4MTQsMzEuMzk1MzQ4OCBDMTYuMzI1NTgxNCwzMC43MDE3MjA5IDE1Ljc4NTg1NCwzMC4xMzk1MzQ5IDE1LjExOTkzNTcsMzAuMTM5NTM0OSBMMTUuMDE5NTk5MiwzMC4xMzk1MzQ5IFoiIGlkPSJQYXRoIiBmaWxsPSJ1cmwoI2xpbmVhckdyYWRpZW50LTEpIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDAuMTcyMDA3NiwyMC4wOTMwMjMzIEMzOS40NzA2MjU1LDIwLjA5MzAyMzMgMzguOTMwMjMyNiwyMC42NTQxMTgzIDM4LjkzMDIzMjYsMjEuMzQ2NDAwMSBMMzguOTMwMjMyNiwyMS4zNTYwMDkzIEMzOC45MzAyMzI2LDIyLjA0ODI5MTEgMzkuNDcwNzY2NiwyMi42MDQ2NTEyIDQwLjE3MjAwNzYsMjIuNjA0NjUxMiBDNDAuODczMjQ4NiwyMi42MDQ2NTEyIDQxLjQ0MTg2MDUsMjIuMDM4NjgxOSA0MS40NDE4NjA1LDIxLjM0NjQwMDEgQzQxLjQ0MTg2MDUsMjAuNjU0MTE4MyA0MC44NzMzODk3LDIwLjA5MzAyMzMgNDAuMTcyMDA3NiwyMC4wOTMwMjMzIFoiIGlkPSJQYXRoIiBmaWxsPSIjRkZGRkZGIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDUuMjA5MzAyMywxMi45NDg3OTgxIEM0NS4yMDkzMDIzLDE0LjY1MDYzNCA0My45MDEzNzM4LDE1LjY4NTYzMjYgNDIuOTQ2MzIxMywxNi40NDUxNjggQzQyLjU4NDYyMzQsMTYuNzMyODU2NyA0MS45MTEzODE2LDE3LjI1Nzc4NDIgNDEuOTEzMTc4NywxNy40NTM4NTgyIEM0MS45MTk3MTM0LDE4LjIyMjk4ODQgNDEuMjY2ODkyOCwxOC44MzcyMDkzIDQwLjQ1NDc4NzgsMTguODM3MjA5MyBDNDAuNDUwNzAzNSwxOC44MzcyMDkzIDQwLjQ0NjYxOTMsMTguODM3MjA5MyA0MC40NDI1MzUxLDE4LjgzNzIwOTMgQzM5LjYzNjE0OCwxOC44MzcyMDkzIDM4Ljk3OTA3OTgsMTguMjQxODY4NSAzOC45NzI1NDUsMTcuNDc2NjA3MiBDMzguOTU5NjM4OSwxNS45NjgyMTQ0IDQwLjEyMTY3OTMsMTUuMDY0OTEyIDQxLjA1NTQ5MzksMTQuMzIyMjQ0OSBDNDEuNzg4MjAxOCwxMy43Mzk0MzkyIDQyLjI2ODY2ODYsMTMuMzI5MzM5NiA0Mi4yNjg2Njg2LDEyLjk1NDA1OTcgQzQyLjI2ODY2ODYsMTIuMTk0MzY5NiA0MS42MTYxNzQ3LDExLjU3NjI3OTkgNDAuODE0MTk4NSwxMS41NzYyNzk5IEM0MC4wMTE4OTU2LDExLjU3NjI3OTkgMzkuMzU5MjM4MywxMi4xOTQzNjk2IDM5LjM1OTIzODMsMTIuOTU0MDU5NyBDMzkuMzU5MjM4MywxMy43MjMzNDQ3IDM4LjcwMTAyNjUsMTQuMzQ2ODUwOCAzNy44ODg5MjE1LDE0LjM0Njg1MDggQzM3LjA3NjgxNjUsMTQuMzQ2ODUwOCAzNi40MTg2MDQ3LDEzLjcyMzM0NDcgMzYuNDE4NjA0NywxMi45NTQwNTk3IEMzNi40MTg2MDQ3LDEwLjY1ODQzMDUgMzguMzkwMjk5NSw4Ljc5MDY5NzY3IDQwLjgxMzg3MTgsOC43OTA2OTc2NyBDNDMuMjM3NjA3NCw4Ljc5MDU0MjkyIDQ1LjIwOTMwMjMsMTAuNjUzMDE0MSA0NS4yMDkzMDIzLDEyLjk0ODc5ODEgWiIgaWQ9IlBhdGgiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" alt="Faqs">
+                                    </div>
+                                    <div class="faqCont">
+                                        <div class="title">
+                                            Still have questions about our Enterprise Services?
+                                            <div class="faqBtn">
+                                                <a href="" class="btnFaq" aria-label="button">READ OUR FAQs</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ end -->
+                        </div>
+                    </div>
+                    </div> 
+                </div>
+                <div class="footer">
+                    <div class="footerFirst">
+                        <div class="footerSec" id="inlinefe0014">
+                            <div><a href="../home.html"><img src="../images/footerLogo.png" /></a></div>
+                            <div id="inlinefe0015">CIN: U74999MH2014PTC306120</div>
+                            <div id="inlinefe0016">
+                                <p class="footerTitle socialGap">GO SOCIAL</p><a><i class="fa fa-facebook fa-2x"></i></a><a><i
+                                        class="fa fa-linkedin fa-2x"></i></a><a><i class="fa fa-twitter fa-2x"></i></a><a><i
+                                        class="fa fa-youtube fa-2x"></i></a><a><i class="fa fa-instagram fa-2x"></i></a></a>
+                            </div>
+                        </div>
+                        <div class="footerSec">
+                            <p class="footerTitle">COMPANY</p>
+                            <p>About Us</p>
+                            <p>Offers</p>
+                            <p>Careers</p>
+                            <p>Blog</p>
+                        </div>
+                        <div class="footerSec">
+                            <p class="footerTitle">SUPPORT</p>
+                            <p>Help Centre</p>
+                            <p>Privacy Policy</p>
+                            <p>Terms of seervice</p>
+                            <p>Insaurance FAQs</p>
+                        </div>
+                        <div class="footerSec">
+                            <p class="footerTitle">DISCOVER PORTER</p>
+                            <p>Trucks in Bangalore</p>
+                            <p>Trucks in Mumbai</p>
+                            <p>Trucks in Delhi NCR</p>
+                            <p>Trucks in Chennai</p>
+                            <p>Trucks in Hyderabad</p>
+                            <p>Trucks in Ahmedabad</p>
+                            <p>Trucks in Pune</p>
+                            <p>Trucks in Surat</p>
+                            <p>Trucks in Kolkata</p>
+                            <p>Trucks in JAIPUR</p>
+                            <p>Trucks in Lucknow</p>
+                        </div>
+                        <div class="footerSec">
+                            <p class="footerTitle">BOOK A TRUCK</p>
+                            <p>City Tempo</p>
+                            <p>For Enterprise</p>
+                            <p>Packers & Movers</p>
+                        </div>
+                    </div>
+                    <div class="footerBottom">
+                        <p id="inlinefe0018" >Download our app</p> <img src="../images/footerAppStore.jpg" id="inlinefe0017" />
+                        <p id="inlinefe0019">©
+                            2021 SmartShift Logistics Solutions Pvt. Ltd. All rights reserved</p>
+                    </div>
+                
+                </div>
+            </div>
+    </body>
+</html>
+<script >
+    function sumbitForm(){
+        document.getElementById("form01").style.display = "none"
+        document.getElementById("hide01").style.display = "block"
+        
+    }
+    document.getElementById("form01").addEventListener("submit", function (event) {
+            event.preventDefault()
+        });
+
+</script>

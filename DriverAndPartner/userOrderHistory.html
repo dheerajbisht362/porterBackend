@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+</head>
+<link rel="stylesheet" href="userOrderHistory.css" >
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script src="https://kit.fontawesome.com/133eda6a97.js" crossorigin="anonymous"></script>
+<body>
+    <div class="header">
+        <div class="headTop">
+            <div><a href="../home.html"><img src="../images/porter_logo_d.jpeg" /></a></div>
+            <div><img src="../images/truckFEN.jpg"  /></div>
+            <div class="userIn" style="float:right">
+                <i class="fas fa-user fa-2x"></i>
+                <div style="display:inline" id="nameUser">
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">>></button>
+                    <div class="dropdown-content">
+                        <a href="#" id="userEmail"></a>
+                        <a href="../home.html">Sign out</a>
+                    </div>
+            </div></div>
+        </div>
+        <div class="headBottom">
+            <div><a href="userOrderHistory.html">ORDER HISTORY</a></div>
+            <div>PROFILE</div>
+            <div><a href="userWallet.html">USER WALLET</a></div>
+        </div>
+    </div>
+    <div class="lowerPart">
+        <div class="leftPart">
+            <div><input id="crnSearch" type="text" placeholder="Order CRN"  /></div>
+            <div class="filter"><span>Filter</span><button id="btnReset">Reset</button></div>
+            <div style="padding-bottom: 0px; margin-bottom: 0px;"><span>From</span><span style="float:right">To</span></div>
+            <div class="inDate"><input placeholder="Enter Date" /><input  placeholder="Enter Date"/></div>
+            <div class="filter" >Order Status</div>
+            <div class="checkboxRow">
+                <input class="checkbox" id="open" value="accepted" type="checkbox">
+                <label for="accepted">Open</label>
+            </div>
+            <div class="checkboxRow">
+                <input class="checkbox" id="accepted" value="accepted" type="checkbox">
+                <label for="accepted">Accepted</label>
+            </div>
+            <div class="checkboxRow">
+                <input class="checkbox" id="live" value="accepted" type="checkbox">
+                <label for="accepted">Live</label>
+            </div>
+            <div class="checkboxRow">
+                <input class="checkbox" id="completed" value="accepted" type="checkbox">
+                <label for="accepted">Completed</label>
+            </div>
+            <div><button type="button" onclick="generateorder()" class="btn btnprimary">SUBMIT</button></div>
+        </div>
+        <div class="rightPart">
+            <div id="total">Total Order </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ORDER ID</th>
+                            <th>VEHICLE</th>
+                            <th>DRIVER</th>
+                        </tr>
+                    </thead>
+                    <tbody id="getData">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    var array = [["405-7451530-944353","TATA ACE", "Saurabh", "open", 943],
+        ["405-3327444-2131503", "TATA ACE", "Raj","accepted", 794],
+        ["405-3181978-4558710", "8FT PICKUP", "Charles", "completed",2046],
+        ["405-6414251-4169918", "8FT PICKUP", "Charles", "live",490],
+        ["405-4227636-9693920", "TATA ACE", "Inder", "completed", 1035],
+        ["405-5341202-0449117", "TATA ACE", "Inder", "open", 2086],
+        ["405-6792759-7022714", "3 Wheeler", "Saurabh", "completed", 446],
+        ["405-5884300-2954762","TATA ACE", "Charles", "completed", 789],
+        ["405-5884300-2954762", "3 Wheeler", "Saurabh", "accepted", 876],
+        ["405-7905087-0951526", "TATA ACE", "Inder", "open",1079],
+        ["405-8312872-4451566", "3 Wheeler", "Saurabh", "live", 8068],
+        ["405-6471530-4841573", "TATA ACE", "Raj", "completed", 7304],
+]
+
+    function putData(){
+        
+        for (var i = 0; i <array.length; i++){
+            tableEntry(array[i])
+        }
+    }
+    function tableEntry(arr){
+        var table = document.getElementById("getData");
+
+        var tdOrder = document.createElement("td");
+        var tdVehicle = document.createElement("td");
+        var tdDriver = document.createElement("td");
+
+        tdOrder.textContent = arr[0]
+        tdVehicle.textContent = arr[1]
+        tdDriver.textContent = arr[2]
+
+        var tr = document.createElement("tr")
+        tr.append(tdOrder, tdVehicle, tdDriver)
+        table.append(tr)
+    }
+    putData();
+    function generateorder(){
+        const cbOpen = document.getElementById('open').checked;
+        const cbAccepted = document.getElementById('accepted').checked;
+        const cbLive = document.getElementById('live').checked;
+        const cbCompleted = document.getElementById('completed').checked;
+
+        var table =document.getElementById('getData')
+        table.innerHTML = null;
+        
+        for (var i = 0; i < array.length; i++){
+            if (cbOpen) if(array[i][3]=="open")  tableEntry(array[i])
+            if (cbAccepted) if (array[i][3] == "live") tableEntry(array[i])
+            if (cbLive) if (array[i][3] == "accepted") tableEntry(array[i])
+            if (cbCompleted) if (array[i][3] == "completed") tableEntry(array[i])
+        }
+    }
+    function userName(){
+        var data = JSON.parse(localStorage.getItem("currentuser"))
+        console.log(data[2])
+
+        document.getElementById("nameUser").innerText = data[2]
+        document.getElementById("userEmail").innerText = data[0]
+    }
+    userName()
+
+</script>

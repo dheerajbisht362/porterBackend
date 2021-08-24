@@ -1,0 +1,163 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "pro";
+}
+.headTop {
+	background-color: #3270d8;
+	color: #fff;
+}
+.headTop > div > a > img {
+	height: 40px;
+	margin-left: 40px;
+}
+.headTop > div {
+	display: inline;
+}
+.fa-user {
+	border-radius: 50%;
+	margin-right: 20px;
+	border-radius: 1px solid #fff;
+}
+.headBottom {
+	background-color: #145acf;
+	padding: 5px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	max-height: 29px;
+}
+.headBottom > div {
+	margin: 5px;
+}
+.headBottom > div > a {
+	color: #fff;
+	margin: 0 20px;
+	text-decoration: none;
+}
+.lowerPart {
+	display: flex;
+}
+/* dropdown content  */
+/* Dropdown Button */
+.dropbtn {
+	background-color: #3270d8;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown > button {
+	width: 100px;
+	margin-right: 100px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* ends Dropdown */
+
+/* lower section  */
+#totalMoney {
+	font-size: 24px;
+	color: green;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.leftPart .rightPart {
+	display: flex;
+	flex-direction: column;
+}
+.leftPart {
+	padding: 20px;
+	border-right: 1px solid #c5c5c5;
+	font-size: 17px;
+	max-width: 330px;
+}
+.leftPart > div {
+	margin: 15px;
+	padding: 5px;
+}
+.rightPart {
+	padding: 40px;
+	font-size: 17px;
+}
+th {
+	width: 300px;
+	padding: 25px 0px;
+	border-bottom: 1px solid #c5c5c5;
+}
+tr {
+	margin: 25px;
+}
+table {
+	text-align: left;
+	border-collapse: separate;
+	border-spacing: 0 15px;
+}
+.filter {
+	border-bottom: 1px solid #c5c5c5;
+}
+.rightPart > div {
+	margin: 5px 25px;
+}
+#total {
+	font-size: 18px;
+}
+
+.submitContW {
+	height: 18%;
+	width: 100%;
+	padding-top: 8%;
+	box-sizing: border-box;
+	border-top: 1px solid #eeeeee;
+	-webkit-box-shadow: 0px 0px 6px 1px #efefef;
+	box-shadow: 0px 0px 6px 1px #efefef;
+}
+.bal {
+	margin-bottom: 5px !important;
+	color: green;
+	font-size: 22px;
+}
+button {
+	width: 170px;
+	height: 40px;
+	background-color: #145acf;
+	color: #fff;
+}
+select {
+	width: 170px;
+	height: 40px;
+	margin-bottom: 20px;
+}

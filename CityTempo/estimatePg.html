@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<head><title>India's largest mini truck aggregator</title>
+<html lang="en">
+<link rel="stylesheet" href="estimatePg.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+
+<body>
+    <div class="bodyW">
+        <!-- header start -->
+        <div class="header-wrapper">
+            <div class="header-container">
+                <div class="logo-container">
+                    <a class="link" href="../home.html">
+                        <div class="logoicon" style="background-image: url(../images/1.png)"></div>
+                    </a>
+        
+                    <div class="heading1">
+                        India's Largest Marketplace for Intracity Logistics
+                    </div>
+                </div>
+        
+                <div class="right-side-header">
+                    <div class="drive-contact">
+                        <a class="join-drive" href="../DriverAndPartner/DriversAndPartners.html">
+                            <img class="driver-logo" src="../images/2.png" alt="driver" />
+                        </a>
+                        <div class="contactnumber">
+                            <div class="number">4410-4410</div>
+                            <div class="descripation">add your city code</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="navbar">
+                <div class="navbar-content">
+                    <div class="navarcontainer">
+                        <div class="navbar-links">
+                            <a class="link" href="../home.html">CITY TEMPO</a>
+                            <a class="link" href="../PackersAndMover/packer&Movers.html">PACKERS & MOVERS</a>
+                            <a class="link" href="../DriverAndPartner/DriversAndPartners.html">DRIVER PARTNER</a>
+                            <a class="link" href="../ForEnterprise/forEnterprises.html">FOR ENTERPRISE</a>
+
+                            <div class="navbar-secondlinks">
+                                <a class="link1" href="#support">Support</a>
+                                <a class="link1" href="#trackmore" style="cursor: pointer">
+                                    <b>Track Order</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- hearder end -->
+
+        <div class="containtW">
+            <div class="estimateW">
+                <!-- leftSection start -->
+                <div class="leftContainer">
+                    <!-- location section start -->
+                    <div class="locationSect">
+                        <!-- pickup -->
+                        <div class="pickupLoct">
+                            <div class="locationLable">
+                                <span class="greenDot"> </span>
+                                <span class="text">Pick up Location</span>
+                                <div id="PickUpData"></div>
+                            </div>
+                            <div class="locationAdd"></div>
+                        </div>
+                        <!-- drop -->
+                        <div class="dropLoct">
+                            <div class="locationLable">
+                                <span class="redDot"> </span>
+                                <span class="text"> Drop Location </span>
+                                <div id="DropOffData"></div>
+                            </div>
+                            <div class="locationAdd"></div>
+                        </div>
+                    </div>
+                    <!-- location section end -->
+
+                    <!-- welcome start -->
+                    <div class="wlcmSec">
+                        <h2 class="guestName">Hello <span id="userData"></span> </h2>
+                        <p class="wlcmText">Here is your trip fare estimate</p>
+                    </div>
+                    <!-- welcome end -->
+
+                    <!-- vehicle display start -->
+                    <div class="vehicalW">
+                        <div class="moveLeft"></div>
+                        <div class="moveRight"></div>
+                        <div class="vehicalContainer group">
+                            <!-- before -->
+                            <div class="shiftVehDisplay">
+                                <img class="shiftImg" src="https://d3o1t8vp7n8wsg.cloudfront.net/assets/house_shift_estimate-9e7133452f839ac7fc6b92bb53516086df681e5b6de2e885e5435f20c638904c.png" alt="shift vehical icon" >
+                                <div class="shiftText"> Looking for full packers and movers solution? </div>
+                                <a class="shiftLink" href="https://porter.in/packers-and-movers?request_id=REQ638675112"> Learn More</a>
+                            </div>
+                            <div class="eachVehicalW">
+                                <div class="aceVeh">
+                                    <div class="vehHeader">
+                                        <p class="vehType">Ace (Helper)</p>
+                                        <p class="vhRange">
+                                            <span class="rupee">₹</span>
+                                            <span class="actualFare">6091</span>
+                                        </p>
+                                    </div>
+                                    <div class="vehImg" ></div>
+                                    <div class="vehDetails">
+                                        <div class="vehCapacity capacityType">
+                                            <span class="field">Capacity: </span>
+                                            <span class="value"> 750 kg </span>
+                                        </div>
+                                        <div class="vehsize capacityType">
+                                            <span class="field">Size (LxBxH): </span>
+                                            <span class="value"> 7ft x 4ft x 5.5ft </span>
+                                            <!-- <button id="selctBtn">SELECT</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eachVehicalW">
+                                <div class="aceVeh">
+                                    <div class="vehHeader">
+                                        <p class="vehType">8 FT 1 TON</p>
+                                        <p class="vhRange">
+                                            <span class="rupee">₹</span>
+                                            <span class="actualFare">8191</span>
+                                        </p>
+                                    </div>
+                                    <div class="vehImg"></div>
+                                    <div class="vehDetails">
+                                        <div class="vehCapacity capacityType">
+                                            <span class="field">Capacity: </span>
+                                            <span class="value"> 1000 kg </span>
+                                        </div>
+                                        <div class="vehsize capacityType">
+                                            <span class="field">Size (LxBxH): </span>
+                                            <span class="value"> 8ft x 4.5ft x 5.5ft </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eachVehicalW">
+                                <div class="aceVeh">
+                                    <div class="vehHeader">
+                                        <p class="vehType">TATA 407</p>
+                                        <p class="vhRange">
+                                            <span class="rupee">₹</span>
+                                            <span class="actualFare">11069</span>
+                                        </p>
+                                    </div>
+                                    <div class="vehImg"></div>
+                                    <div class="vehDetails">
+                                        <div class="vehCapacity capacityType">
+                                            <span class="field">Capacity: </span>
+                                            <span class="value"> 2500 kg </span>
+                                        </div>
+                                        <div class="vehsize capacityType">
+                                            <span class="field">Size (LxBxH): </span>
+                                            <span class="value"> 6ft x 5.5ft x 6ft </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eachVehicalW">
+                                <div class="aceVeh">
+                                    <div class="vehHeader">
+                                        <p class="vehType">8 FT PickUp</p>
+                                        <p class="vhRange">
+                                            <span class="rupee">₹</span>
+                                            <span class="actualFare">7091</span>
+                                        </p>
+                                    </div>
+                                    <div class="vehImg"></div>
+                                    <div class="vehDetails">
+                                        <div class="vehCapacity capacityType">
+                                            <span class="field">Capacity: </span>
+                                            <span class="value"> 1250 kg </span>
+                                        </div>
+                                        <div class="vehsize capacityType">
+                                            <span class="field">Size (LxBxH): </span>
+                                            <span class="value"> 9ft x 5ft x 6ft </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eachVehicalW">
+                                <div class="aceVeh">
+                                    <div class="vehHeader">
+                                        <p class="vehType">Ace (Helper)</p>
+                                        <p class="vhRange">
+                                            <span class="rupee">₹</span>
+                                            <span class="actualFare">5091</span>
+                                        </p>
+                                    </div>
+                                    <div class="vehImg"></div>
+                                    <div class="vehDetails">
+                                        <div class="vehCapacity capacityType">
+                                            <span class="field">Capacity: </span>
+                                            <span class="value"> 750 kg </span>
+                                        </div>
+                                        <div class="vehsize capacityType">
+                                            <span class="field">Size (LxBxH): </span>
+                                            <span class="value"> 7ft 4.5ft x 5.5ft </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eachVehicalW">
+                                <div class="aceVeh">
+                                    <div class="vehHeader">
+                                        <p class="vehType">Ace (Helper)</p>
+                                        <p class="vhRange">
+                                            <span class="rupee">₹</span>
+                                            <span class="actualFare">5091</span>
+                                        </p>
+                                    </div>
+                                    <div class="vehImg"></div>
+                                    <div class="vehDetails">
+                                        <div class="vehCapacity capacityType">
+                                            <span class="field">Capacity: </span>
+                                            <span class="value"> 750 kg </span>
+                                        </div>
+                                        <div class="vehsize capacityType">
+                                            <span class="field">Size (LxBxH): </span>
+                                            <span class="value"> 7ft 4.5ft x 5.5ft </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- vehical display end -->
+                </div>
+                <!-- leftSection End -->
+
+                <!-- right section start -->
+                <div class="rightCont">
+                    <h2 class="rtHeading"> BOOK your PORTER </h2>
+                    <div class="dash"></div>
+                    <div class="explainPointsW">
+                        <div class="pointWiseexpl">
+                            <div class="pointHeading dowAppPt">
+                                <div class="ptnum">1:</div>
+                                <div class="ptText">Download the Porter App</div>
+                            </div>
+                            <div class="dwnldApp" style="margin-left: 22px; margin-top: 14px;">
+                                <div class="dwnldAppIcon">
+                                    <a class="appAndr" href="https://play.google.com/store/apps/details?id=com.theporter.android.customerapp&referrer=web_tracking_id%253D76de495a04bf8ec657b0c3a3bd2a5218" target="blank">
+                                    <img src="../images/playstore.JPG" alt="">
+                                    </a>
+                                    <a class="appIphone" href="https://play.google.com/store/apps/details?id=com.theporter.android.customerapp&referrer=web_tracking_id%253D76de495a04bf8ec657b0c3a3bd2a5218" target="blank">
+                                    <img src="../images/apple.JPG" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pointWiseexpl">
+                            <div class="pointHeading">
+                                <div class="ptnum">2:</div>
+                                <div class="ptText">Select pickup & destination</div>
+                            </div>
+                            <div class="ptDisc">You can see the vehicles around you</div>
+                        </div>
+                        <div class="pointWiseexpl">
+                            <div class="pointHeading">
+                                <div class="ptnum">3:</div>
+                                <div class="ptText">Add your receiver details and book</div>
+                            </div>
+                            <div class="ptDisc"> Share your goods type and quantity</div>
+                        </div>
+                    </div>
+                    <div class="reqCallbk">
+                        <p class="para">For any other queries call CC</p>
+                        <div class="reqCallContainer">
+                            <button class="btnReqCallbk"> REQUEST CALLBACK</button>
+                        </div>
+                        <!-- <p class="msgCallbk" style="color: rgb(0, 128, 0);">Callback request saved sucessfully</p> -->
+                    </div>
+                </div>
+                <!-- right section end -->
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="footerFirst">
+            <div class="footerSec" style="min-width: 305px">
+                <div><a href="../home.html"><img src="../images/footerLogo.png" /></a></div>
+                <div style="margin: 20px 0;">CIN: U74999MH2014PTC306120</div>
+                <div style="margin-top:35px">
+                    <p class="footerTitle socialGap">GO SOCIAL</p><a><i class="fa fa-facebook fa-2x"></i></a><a><i
+                            class="fa fa-linkedin fa-2x"></i></a><a><i class="fa fa-twitter fa-2x"></i></a><a><i
+                            class="fa fa-youtube fa-2x"></i></a><a><i class="fa fa-instagram fa-2x"></i></a></a>
+                </div>
+            </div>
+            <div class="footerSec">
+                <p class="footerTitle">COMPANY</p>
+                <p>About Us</p>
+                <p>Offers</p>
+                <p>Careers</p>
+                <p>Blog</p>
+            </div>
+            <div class="footerSec">
+                <p class="footerTitle">SUPPORT</p>
+                <p>Help Centre</p>
+                <p>Privacy Policy</p>
+                <p>Terms of seervice</p>
+                <p>Insaurance FAQs</p>
+            </div>
+            <div class="footerSec">
+                <p class="footerTitle">DISCOVER PORTER</p>
+                <p>Trucks in Bangalore</p>
+                <p>Trucks in Mumbai</p>
+                <p>Trucks in Delhi NCR</p>
+                <p>Trucks in Chennai</p>
+                <p>Trucks in Hyderabad</p>
+                <p>Trucks in Ahmedabad</p>
+                <p>Trucks in Pune</p>
+                <p>Trucks in Surat</p>
+                <p>Trucks in Kolkata</p>
+                <p>Trucks in JAIPUR</p>
+                <p>Trucks in Lucknow</p>
+            </div>
+            <div class="footerSec">
+                <p class="footerTitle">BOOK A TRUCK</p>
+                <p>City Tempo</p>
+                <p>For Enterprise</p>
+                <p>Packers & Movers</p>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p style="float: left">Download our app</p> <img src="../images/footerAppStore.jpg"
+                style="margin-left: 35px;" />
+            <p style="float:right">©
+                2021 SmartShift Logistics Solutions Pvt. Ltd. All rights reserved</p>
+        </div>
+    
+    </div>
+</body>
+</html>
+<script>
+
+    function putdata(){
+        var name = localStorage.getItem("name")
+        var dropAddress = localStorage.getItem("dropOffLoc")
+        var pickAddress = localStorage.getItem("pickUpLoc")
+
+        document.getElementById("PickUpData").textContent = pickAddress;
+        document.getElementById("DropOffData").textContent = dropAddress;
+        document.getElementById("userData").textContent = name;
+
+    }
+    putdata()
+</script>
