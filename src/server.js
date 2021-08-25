@@ -16,7 +16,6 @@ app.use("/user", userController);
 app.use("/order", orderController);
 
 app.use(express.urlencoded({ extended: false }));
-app.use("/static", express.static(path.join(__dirname, "public")));
 
 app.listen(port, async (req, res) => {
     connect();
