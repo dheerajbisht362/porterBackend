@@ -64,42 +64,38 @@
 </body>
 </html>
 <script>
-    var details = [[1,"TATA ACE", "Saurabh", "open", 943, "05 / 06 / 2021"],
-        [1, "TATA ACE", "Raj","accepted", 794,"23 / 04 / 2021"],
-        [1, "8FT PICKUP", "Charles", "completed",2046, "26 / 01 / 2021"],
-        [2, "8FT PICKUP", "Charles", "live",490, "05 / 07 / 2021"],
-        [2, "TATA ACE", "Inder", "completed", 1035, "18 / 06 / 2021"],
-        [2, "TATA ACE", "Inder", "open", 2086, "24 / 02 / 2021"],
-        [1, "3 Wheeler", "Saurabh", "completed", 446, "20 / 05 / 2021"],
-        [2,"TATA ACE", "Charles", "completed", 789, "13 / 01 / 2021"],
-        [2, "3 Wheeler", "Saurabh", "accepted", 876, "22 / 03 / 2021"],
-        [1, "TATA ACE", "Inder", "open",1079, "26 / 06 / 2021"],
-        [2, "3 Wheeler", "Saurabh", "live", 8068, "28 / 02 / 2021"],
-        [2, "TATA ACE", "Raj", "completed", 7304, "27 / 02 / 2021"],
-]
+    const data = JSON.parse(localStorage.getItem("currentuser"))
+
+        const id = data._id;
+        var array
+        fetch(`http://localhost:2345/order/${id}`)
+        .then(res => res.json())
+        .then((res) => {
+            array = res.details;
+            putBalance();
+            putData();
+        })
+        .catch(err => console.log(err));
     function putBalance() {
         let sum = 0;
-            for (var i = 0; i < details.length; i++) {
-                if (details[i][0] == 1) sum+= details[i][4]
-            }
+            array.forEach((el)=>{
+                if (el.transactionType == "Credit") sum+= el.amount;
+            })
             document.getElementById('totalMoney').textContent = " ₹ " + sum
         }
-    putBalance()
+    
     function putData(){
-        
-        for (var i = 0; i <details.length; i++){
-            tableEntry(details[i])
-        }
+        array.forEach(el=>{tableEntry(el)});
     }
-     function putCredit() {
-            for (var i = 0; i < details.length; i++) {
-                if (details[i][0] == 1) tableEntry(details[i])
-            }
-        }
+    function putCredit() {
+        array.forEach(el=> {
+            if(el.transactionType == "Credit") tableEntry(el)
+        })
+    }
     function putDebit(){
-         for (var i = 0; i < details.length; i++) {
-            if(details[i][0] == 2) tableEntry(details[i])
-        }
+        array.forEach(el=> {
+            if(el.transactionType == "Debit") tableEntry(el)
+        })
     }
     function tableEntry(arr){
         var table = document.getElementById("getData");
@@ -108,15 +104,14 @@
         var tdDesc = document.createElement("td");
         var tdAmount = document.createElement("td");
 
-        tdDate.textContent = arr[5]
-        tdDesc.textContent = arr[1] + " delivery by "+ arr[2]
-        tdAmount.textContent = arr[4]
+        tdDate.textContent = arr.date
+        tdDesc.textContent = arr.vechicalName + " delivery by "+ arr.driverName
+        tdAmount.textContent = arr.amount
 
         var tr = document.createElement("tr")
         tr.append(tdDate, tdDesc, tdAmount)
         table.append(tr)
     }
-    putData();
     function search(){
         var table =document.getElementById('getData')
         table.innerHTML = null;
@@ -125,12 +120,11 @@
         if (document.getElementById('money').value== "credit") putCredit();
         
     }
-    function userName() {
-            var data = JSON.parse(localStorage.getItem("currentuser"))
-            console.log(data[2])
+    function userName(){
+        var data = JSON.parse(localStorage.getItem("currentuser"))
 
-            document.getElementById("nameUser").innerText = data[2]
-            document.getElementById("userEmail").innerText = data[0]
-        }
-        userName()
+        document.getElementById("nameUser").innerText = data.fullName
+        document.getElementById("userEmail").innerText = data.email
+    }
+    userName()
 </script>

@@ -77,25 +77,20 @@
 </body>
 </html>
 <script>
-    var array = [["405-7451530-944353","TATA ACE", "Saurabh", "open", 943],
-        ["405-3327444-2131503", "TATA ACE", "Raj","accepted", 794],
-        ["405-3181978-4558710", "8FT PICKUP", "Charles", "completed",2046],
-        ["405-6414251-4169918", "8FT PICKUP", "Charles", "live",490],
-        ["405-4227636-9693920", "TATA ACE", "Inder", "completed", 1035],
-        ["405-5341202-0449117", "TATA ACE", "Inder", "open", 2086],
-        ["405-6792759-7022714", "3 Wheeler", "Saurabh", "completed", 446],
-        ["405-5884300-2954762","TATA ACE", "Charles", "completed", 789],
-        ["405-5884300-2954762", "3 Wheeler", "Saurabh", "accepted", 876],
-        ["405-7905087-0951526", "TATA ACE", "Inder", "open",1079],
-        ["405-8312872-4451566", "3 Wheeler", "Saurabh", "live", 8068],
-        ["405-6471530-4841573", "TATA ACE", "Raj", "completed", 7304],
-]
+    const data = JSON.parse(localStorage.getItem("currentuser"))
 
-    function putData(){
-        
-        for (var i = 0; i <array.length; i++){
-            tableEntry(array[i])
-        }
+    const id = data._id;
+    var array
+    fetch(`http://localhost:2345/order/${id}`)
+    .then(res=>res.json())
+    .then((res)=> {
+        array = res.details;
+        putData()
+    })
+    .catch(err=>console.log(err));
+    
+    function putData(){   
+        array.forEach((el)=>tableEntry(el));
     }
     function tableEntry(arr){
         var table = document.getElementById("getData");
@@ -104,15 +99,14 @@
         var tdVehicle = document.createElement("td");
         var tdDriver = document.createElement("td");
 
-        tdOrder.textContent = arr[0]
-        tdVehicle.textContent = arr[1]
-        tdDriver.textContent = arr[2]
+        tdOrder.textContent = arr.orderId;
+        tdVehicle.textContent = arr.vechicalName;
+        tdDriver.textContent = arr.driverName;
 
         var tr = document.createElement("tr")
         tr.append(tdOrder, tdVehicle, tdDriver)
         table.append(tr)
     }
-    putData();
     function generateorder(){
         const cbOpen = document.getElementById('open').checked;
         const cbAccepted = document.getElementById('accepted').checked;
@@ -122,19 +116,18 @@
         var table =document.getElementById('getData')
         table.innerHTML = null;
         
-        for (var i = 0; i < array.length; i++){
-            if (cbOpen) if(array[i][3]=="open")  tableEntry(array[i])
-            if (cbAccepted) if (array[i][3] == "live") tableEntry(array[i])
-            if (cbLive) if (array[i][3] == "accepted") tableEntry(array[i])
-            if (cbCompleted) if (array[i][3] == "completed") tableEntry(array[i])
-        }
+        array.forEach((el)=>{
+            if (cbOpen) if(el.status=="open")  tableEntry(el)
+            if (cbAccepted) if (el.status == "live") tableEntry(el)
+            if (cbLive) if (el.status == "accepted") tableEntry(el)
+            if (cbCompleted) if (el.status == "completed") tableEntry(el)
+        })
     }
     function userName(){
         var data = JSON.parse(localStorage.getItem("currentuser"))
-        console.log(data[2])
 
-        document.getElementById("nameUser").innerText = data[2]
-        document.getElementById("userEmail").innerText = data[0]
+        document.getElementById("nameUser").innerText = data.fullName
+        document.getElementById("userEmail").innerText = data.email
     }
     userName()
 

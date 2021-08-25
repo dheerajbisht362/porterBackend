@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const orderHistorySchema = new mongoose.Schema({
+    orderId: String,
     transactionType: String,
     vechicalName: String,
     driverName: String,

@@ -1,5 +1,5 @@
-var logInData = [["dheerajbisht362@gmail.com", "123456","Dheeraj Bisht"]]
-localStorage.setItem("logData", JSON.stringify(logInData))
+//var logInData = [["dheerajbisht362@gmail.com", "123456","Dheeraj Bisht"]]
+//localStorage.setItem("logData", JSON.stringify(logInData))
 
 function openForm() {
     document.getElementById("myForm").style.display = "block"
@@ -46,17 +46,34 @@ function redirect() {
     }
     return false
 }
-function validateMyForm()
-{   console.log(1)
-    if (redirect()) {
-        // console.log(1)
-        window.location.href = "userOrderHistory.html"
+function validateMyForm() {
+    const formdata = {
+        password : document.getElementById('psw').value,
+        email : document.getElementById('email').value,
     }
-    else {
-        alert("Email or password incorrect");
-    }
+    body = JSON.stringify(formdata);
+    fetch(`http://localhost:2345/user/auth/login`,{
+        method: "POST",
+        redirect: "follow",
+        body: body,
+        headers: {
+        "Content-type": "application/json; charset=UTF-8"
+        }
+    }).then(res => {
+        console.log(res)
+        return res.json();
+    }).then(res => {
+        console.log(res)
+        if (res._id === undefined) return "Invalid"
+        else {
+            localStorage.setItem("currentuser", JSON.stringify(res));
+            window.location.href = `./userOrderHistory.html?id=${res._id}`;
+        }
+    })
+    .catch((err) => {
+        console.log(err.message)
+    })
 }
 document.getElementById("myForm").addEventListener("submit", function(event){
   event.preventDefault()
 });
-
