@@ -21,7 +21,7 @@
                     <button class="dropbtn">>></button>
                     <div class="dropdown-content">
                         <a href="#"id="userEmail"></a>
-                        <a href="../home.html">Sign out</a>
+                        <a onclick="remove()">Sign out</a>
                     </div>
                 </div>
             </div>
@@ -65,9 +65,17 @@
 </html>
 <script>
     const data = JSON.parse(localStorage.getItem("currentuser"))
-
-        const id = data._id;
-        var array
+    var array
+    var user
+    fetch(`http://localhost:2345/user/`,{
+        headers: {
+            "Authorization": "Bearer "+ data.accessToken
+            //id_token
+        }
+    }).then(res=>res.json())
+    .then(user=>{
+        const id = user._id;
+        userName(user)
         fetch(`http://localhost:2345/order/${id}`)
         .then(res => res.json())
         .then((res) => {
@@ -75,7 +83,8 @@
             putBalance();
             putData();
         })
-        .catch(err => console.log(err));
+    })
+    .catch(err=>console.log(err));
     function putBalance() {
         let sum = 0;
             array.forEach((el)=>{
@@ -120,11 +129,12 @@
         if (document.getElementById('money').value== "credit") putCredit();
         
     }
-    function userName(){
-        var data = JSON.parse(localStorage.getItem("currentuser"))
-
-        document.getElementById("nameUser").innerText = data.fullName
-        document.getElementById("userEmail").innerText = data.email
+    function userName(user){
+        document.getElementById("nameUser").innerText = user.fullName
+        document.getElementById("userEmail").innerText = user.email
     }
-    userName()
+    function remove(){
+        localStorage.removeItem('currentuser');
+        window.location.href= "../home.html"
+    }
 </script>

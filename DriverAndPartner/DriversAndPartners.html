@@ -14,8 +14,8 @@
   </head>
 
   <body>
-    <div class="form-popup" id="myForm">
-      <div id="inlinedp0029">
+    <div class="form-popup" id="loginForm">
+      <div class="inlinedp0029">
         <div class="extra10">
          <div><i class="fas fa-laptop"></i>Manage your trips</div>
          <div><i class="fas fa-search-location"></i>Track your expenses</div> 
@@ -23,7 +23,7 @@
         </div>
         <div>
           <form class="form-container" id="loginData">
-            <button class="cross" onclick="closeForm()">X</button>
+            <button class="cross" onclick="closeForm('loginForm')">X</button>
             <h3 class="formHead"> Customer Login </h3>
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" id="email" required>
@@ -35,6 +35,33 @@
           </form>
         </div>
         </div>
+    </div>
+    <div class="form-popup" id="signupForm">
+      <!-- <div class="inlinedp0029"> -->
+        <!-- <div class="extra10">
+          <div><i class="fas fa-laptop"></i>Manage your trips</div>
+          <div><i class="fas fa-search-location"></i>Track your expenses</div>
+          <div><i class="fas fa-file-invoice"></i>Generate Invoice</div>
+        </div> -->
+        <div>
+          <form id="form-margin" class="form-container" id="signUpData">
+            <button class="cross" onclick="closeForm('signupForm')">X</button>
+            <h3 class="signFormHead"> Sign Up </h3>
+            <small>Please fill this form to create an account</small>
+            <br/>
+            <!-- <label for="fullName"><b>Full Name</b></label> -->
+            <input type="text" placeholder="Name" id="fullNameSign" required>
+            <!-- <label for="email"><b>Email</b></label> -->
+            <input type="text" placeholder="Email" id="emailSign" required>
+            <!-- <label for="psw"><b>Password</b></label> -->
+            <input type="password" placeholder="Password" id="psw1" required>
+            <input type="password" placeholder="Confirm Password" id="psw2" required>
+    
+            <button type="submit" onclick=" validateSignIn()" class="btn">PROCEED</button>
+    
+          </form>
+        </div>
+      <!-- </div> -->
     </div>
     <div id="main-container">
       <div class="header">
@@ -73,7 +100,8 @@
                   <a class="link" href="../ForEnterprise/forEnterprises.html">FOR ENTERPRISE</a>
                                          
                   <div class="navbar-secondlinks">
-                    <button onclick="openForm()" class="border01">Login</button>
+                    <button onclick="openForm('signupForm')" class="border01">Sign Up</button>
+                    <button onclick="openForm('loginForm')" class="border01">Login</button>
                     <a class="link1" href="#support">Support</a>
                     <a class="link1" >Track Order</a>
                   </div>

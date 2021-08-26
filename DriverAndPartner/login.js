@@ -1,12 +1,11 @@
-//var logInData = [["dheerajbisht362@gmail.com", "123456","Dheeraj Bisht"]]
-//localStorage.setItem("logData", JSON.stringify(logInData))
-
-function openForm() {
-    document.getElementById("myForm").style.display = "block"
+function openForm(id) {
+    if (id == 'signupForm') closeForm('loginForm');
+    else closeForm('signupForm')
+    document.getElementById(id).style.display = "block"
     document.getElementById("main-container").classList.add("blur");
-            }
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+}
+function closeForm(id) {
+    document.getElementById(id).style.display = "none";
     document.getElementById("main-container").classList.remove("blur");
 }
 var last_question
@@ -21,7 +20,7 @@ function toggleElement(id)
     if(document.getElementById(id).style.display == 'none')
     {
         element.classList.toggle("dis_none");
-        console.log(id)
+        console.log(id);
         document.getElementById(id+ "Col").style.color = 'blue';
     }
     else
@@ -46,6 +45,31 @@ function redirect() {
     }
     return false
 }
+function validateSignIn() {
+    const formdata = {
+        password : document.getElementById('psw1').value,
+        email: document.getElementById('emailSign').value,
+        fullName: document.getElementById('fullNameSign').value,
+    }
+    if (formdata.password !== document.getElementById('psw2').value) {
+        alert('Passwords do not match')
+    }
+    body = JSON.stringify(formdata);
+    fetch(`http://localhost:2345/user/signup`,{
+        method: "POST",
+        body: body,
+        headers: {
+        "Content-type": "application/json; charset=UTF-8"
+        }
+    }).then((res) => {
+        alert("Sucess Account Created")
+        closeForm('signupForm')
+
+    }).catch((err) => {
+        alert(err.message)
+    })
+
+}
 function validateMyForm() {
     const formdata = {
         password : document.getElementById('psw').value,
@@ -54,26 +78,28 @@ function validateMyForm() {
     body = JSON.stringify(formdata);
     fetch(`http://localhost:2345/user/auth/login`,{
         method: "POST",
-        redirect: "follow",
         body: body,
         headers: {
         "Content-type": "application/json; charset=UTF-8"
         }
     }).then(res => {
-        console.log(res)
         return res.json();
     }).then(res => {
-        console.log(res)
-        if (res._id === undefined) return "Invalid"
-        else {
+        if (!res.error) {
             localStorage.setItem("currentuser", JSON.stringify(res));
-            window.location.href = `./userOrderHistory.html?id=${res._id}`;
+            window.location.href = `./userOrderHistory.html`
+        }
+        if (res.error) {
+            alert("Invalid LogIn credentials")
         }
     })
     .catch((err) => {
         console.log(err.message)
     })
 }
-document.getElementById("myForm").addEventListener("submit", function(event){
+document.getElementById("signupForm").addEventListener("submit", function(event){
+  event.preventDefault()
+});
+document.getElementById("loginForm").addEventListener("submit", function(event){
   event.preventDefault()
 });

@@ -22,7 +22,7 @@
                     <button class="dropbtn">>></button>
                     <div class="dropdown-content">
                         <a href="#" id="userEmail"></a>
-                        <a href="../home.html">Sign out</a>
+                        <a onclick="remove()">Sign out</a>
                     </div>
             </div></div>
         </div>
@@ -78,17 +78,29 @@
 </html>
 <script>
     const data = JSON.parse(localStorage.getItem("currentuser"))
-
-    const id = data._id;
     var array
-    fetch(`http://localhost:2345/order/${id}`)
-    .then(res=>res.json())
-    .then((res)=> {
-        array = res.details;
-        putData()
+    var user
+    fetch(`http://localhost:2345/user/`,{
+        headers: {
+            "Authorization": "Bearer "+ data.accessToken
+            //id_token
+        }
+    }).then(res=>res.json())
+    .then(user=>{
+        const id = user._id;
+        userName(user)
+        fetch(`http://localhost:2345/order/${id}`)
+        .then(res=>res.json())
+        .then((res)=> {
+            array = res.details;
+            putData() 
+        })
     })
     .catch(err=>console.log(err));
-    
+    function remove(){
+        localStorage.removeItem('currentuser');
+        window.location.href= "../home.html"
+    }
     function putData(){   
         array.forEach((el)=>tableEntry(el));
     }
@@ -123,12 +135,8 @@
             if (cbCompleted) if (el.status == "completed") tableEntry(el)
         })
     }
-    function userName(){
-        var data = JSON.parse(localStorage.getItem("currentuser"))
-
-        document.getElementById("nameUser").innerText = data.fullName
-        document.getElementById("userEmail").innerText = data.email
+    function userName(user){
+        document.getElementById("nameUser").innerText = user.fullName
+        document.getElementById("userEmail").innerText = user.email
     }
-    userName()
-
 </script>

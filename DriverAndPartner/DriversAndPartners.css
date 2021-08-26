@@ -687,10 +687,11 @@ a > i {
 .form-popup {
 	display: none;
 	position: fixed;
-	right: 27%;
 	border: 3px solid #f1f1f1;
-	z-index: 1003;
-	top: 27%;
+	z-index: 5;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .extra10 {
 	background: #f1f1f1;
@@ -714,6 +715,9 @@ a > i {
 	margin: 5px 0 20px 0;
 	border: none;
 	background: #f1f1f1;
+}
+#form-margin input {
+	margin: 5px;
 }
 
 /* When the inputs get focus, do something */
@@ -788,8 +792,11 @@ a > i {
 	margin-bottom: 15px;
 	border-bottom: 1px solid #cdcdcd;
 	font-size: 20px;
-	font-weight: 600;
 	color: #212121;
+}
+.signFormHead {
+	font-size: 20px;
+	margin-bottom: 5px;
 }
 
 .dis_none {
@@ -937,7 +944,7 @@ option {
 #inlinedp0028 {
 	float: right;
 }
-#inlinedp0029 {
+.inlinedp0029 {
 	display: flex;
 }
 #inlinedp0030 {
