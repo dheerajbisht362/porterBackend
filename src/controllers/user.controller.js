@@ -28,7 +28,7 @@ router.post("/auth/login", async (req, res) => {
         const accessToken = jwt.sign(email, process.env.ACCESS_TOKEN_SECRET);
         return res.json({accessToken: accessToken})    
         }
-    return res.status(404).json({error:"Invaid logIn credentials"})
+        return res.status(404).json({error:"Invaid logIn credentials"})
     }
     catch (err) {
         console.log(err.message)

@@ -169,7 +169,10 @@
             }
         }).then(res => {
             return res.json();
-        }).then(res => putUserDetails(res))
+        }).then(res => { 
+            putUserDetails(res)
+            alert("details Updated");
+        })
         .catch(err => {return err.message});
     }
     function remove(){
