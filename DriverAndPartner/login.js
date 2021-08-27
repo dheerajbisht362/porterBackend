@@ -55,13 +55,17 @@ function validateSignIn() {
         alert('Passwords do not match')
     }
     body = JSON.stringify(formdata);
-    fetch(`http://localhost:2345/user/signup`,{
+    fetch(`http://localhost:2345/user/signup`, {
         method: "POST",
         body: body,
         headers: {
         "Content-type": "application/json; charset=UTF-8"
         }
     }).then((res) => {
+        if (res.status !== 200) {
+            alert("Email already Present")
+            return
+        }
         alert("Sucess Account Created")
         closeForm('signupForm')
 

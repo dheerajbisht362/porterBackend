@@ -29,39 +29,28 @@
             <input type="text" placeholder="Enter Email" id="email" required>
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" id="psw" required>
-          
-            <button type="submit" onclick=" validateMyForm()" class="btn">NEXT</button>
-          
+            <button type="submit" onclick="validateMyForm()" class="btn">NEXT</button>
           </form>
         </div>
-        </div>
+      </div>
     </div>
     <div class="form-popup" id="signupForm">
-      <!-- <div class="inlinedp0029"> -->
-        <!-- <div class="extra10">
-          <div><i class="fas fa-laptop"></i>Manage your trips</div>
-          <div><i class="fas fa-search-location"></i>Track your expenses</div>
-          <div><i class="fas fa-file-invoice"></i>Generate Invoice</div>
-        </div> -->
-        <div>
-          <form id="form-margin" class="form-container" id="signUpData">
-            <button class="cross" onclick="closeForm('signupForm')">X</button>
-            <h3 class="signFormHead"> Sign Up </h3>
-            <small>Please fill this form to create an account</small>
-            <br/>
-            <!-- <label for="fullName"><b>Full Name</b></label> -->
-            <input type="text" placeholder="Name" id="fullNameSign" required>
-            <!-- <label for="email"><b>Email</b></label> -->
-            <input type="text" placeholder="Email" id="emailSign" required>
-            <!-- <label for="psw"><b>Password</b></label> -->
-            <input type="password" placeholder="Password" id="psw1" required>
-            <input type="password" placeholder="Confirm Password" id="psw2" required>
-    
-            <button type="submit" onclick=" validateSignIn()" class="btn">PROCEED</button>
-    
-          </form>
-        </div>
-      <!-- </div> -->
+      <div>
+        <form id="form-margin" class="form-container" id="signUpData">
+          <button class="cross" onclick="closeForm('signupForm')">X</button>
+          <h3 class="signFormHead"> Sign Up </h3>
+          <p>Please fill this form to create an account</p>
+          <!-- <label for="fullName"><b>Full Name</b></label> -->
+          <input type="text" placeholder="Name" id="fullNameSign" required>
+          <!-- <label for="email"><b>Email</b></label> -->
+          <input type="text" placeholder="Email" id="emailSign" required>
+          <!-- <label for="psw"><b>Password</b></label> -->
+          <input type="password" placeholder="Password" id="psw1" required>
+          <input type="password" placeholder="Confirm Password" id="psw2" required>
+          <small>By creating an account you agree to our <br/><a href="#" style="color:dodgerblue">Terms & Privacy</a>.</small>
+          <button type="submit" onclick=" validateSignIn()" class="btn">PROCEED</button>
+        </form>
+      </div>
     </div>
     <div id="main-container">
       <div class="header">

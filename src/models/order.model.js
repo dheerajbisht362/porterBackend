@@ -8,7 +8,7 @@ const orderHistorySchema = new mongoose.Schema({
     status: String,
     amount: Number,
     date: String
-})
+}, { versionKey: false })
 const orderschema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
