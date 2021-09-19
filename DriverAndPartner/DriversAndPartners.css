@@ -644,6 +644,11 @@ a > i {
 .border01 {
 	border: none;
 	background-color: #fff;
+	font-weight: 600;
+	color: #212121;
+	font-size: 15px;
+	line-height: 40px;
+	font-family: "Titillium Web", sans-serif;
 }
 .footerBottom {
 	margin-top: 12px;
@@ -654,9 +659,6 @@ a > i {
 	-moz-filter: blur(2px);
 	-o-filter: blur(2px);
 	-ms-filter: blur(2px);
-	/* filter: blur(2px) !important;
-	filter: brightness(50%) !important;
-	filter: opacity(0.5); */
 }
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {

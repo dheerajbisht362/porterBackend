@@ -72,7 +72,7 @@
                                 <!-- <label for ="city"></label> -->
                                 <div id="fillup">
                                     <!-- <input type="text" id="city" class="form-control" placeholder="Select City" name="city"> -->
-                                    <select name="city" id="city" class="form-control" placeholder="Select Cities">
+                                    <select name="city" id="city" class="form-control" placeholder="Select Cities" required>
                                         <option value="">Select City</option>
                                         <option value="Mumbai">Mumbai</option>
                                         <option value="Bangalore">Bangalore</option>
@@ -85,9 +85,9 @@
                                         <option value="Pune">Pune</option>
                                     </select>
                                     </input>
-                                    <input type="text" id="name" class="form-control" placeholder="Contact Person">
+                                    <input type="text" id="name" class="form-control" placeholder="Contact Person" required>
                                     <input type="text" id="company" class="form-control" placeholder="Company Name">
-                                    <input type="text" id="contact" class="form-control" placeholder="+91 -">
+                                    <input type="text" id="contact" class="form-control" placeholder="+91 -" required>
                                     <!-- <input type="text" id="trips" class="form-control" placeholder="Monthly Trips"> -->
                                     <select name="trips" id="trip" class="form-control">
                                         <option value="" id="inlinefe0013">Monthly Trips</option>
@@ -96,7 +96,7 @@
                                         <option value="50-100">50-100</option>
                                         <option value="More than 100">More than 100</option>
                                     </select>
-                                    <input type="text" id="email" class="form-control" placeholder="Email address">
+                                    <input type="text" id="email" class="form-control" placeholder="Email address" required>
                                     <input type="text" id="desig" class="form-control" placeholder="Contact Designation">
                                 </div>
                                 <div id="btn">
@@ -362,6 +362,24 @@
 </html>
 <script >
     function sumbitForm(){
+        const formdata = {
+            city: document.getElementById('city').value,
+            name: document.getElementById('name').value,
+            trip: document.getElementById('trip').value,
+            contact: document.getElementById('contact').value,
+            trip: document.getElementById('trip').value,
+            email: document.getElementById('email').value,
+            desig: document.getElementById('desig').value,
+        }
+        body = JSON.stringify(formdata);
+        fetch(`http://localhost:2345/leads`, {
+            method: "POST",
+            body: body,
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        }).then(res =>res.json()).then(res=> res).catch(err=>console.error(err.message));
+
         document.getElementById("form01").style.display = "none"
         document.getElementById("hide01").style.display = "block"
         

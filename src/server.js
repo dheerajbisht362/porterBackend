@@ -11,10 +11,12 @@ const connect = require("./configs/db");
 
 const userController = require("./controllers/user.controller");
 const orderController = require("./controllers/order.controller")
+const contactController = require("./controllers/contactInfo.controller")
 
 app.use(cors())
 app.use("/user", userController);
 app.use("/order", orderController);
+app.use("/leads", contactController);
 
 app.use(express.urlencoded({ extended: false }));
 

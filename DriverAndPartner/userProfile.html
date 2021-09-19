@@ -170,8 +170,9 @@
         }).then(res => {
             return res.json();
         }).then(res => { 
+            userName(res)
             putUserDetails(res)
-            alert("details Updated");
+            alert("Details Updated");
         })
         .catch(err => {return err.message});
     }
