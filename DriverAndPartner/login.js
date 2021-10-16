@@ -143,18 +143,18 @@ function validateMyForm() {
 		},
 	})
 		.then((res) => {
-			//console.log(res)
 			return res.json();
 		})
 		.then((res) => {
-			if (!res.error) {
-				console.log(res);
-				localStorage.setItem("currentuser", JSON.stringify(res));
-				window.location.href = `./userOrderHistory.html`;
-			}
-			if (res.error) {
-				alert("Invalid LogIn credentials");
-			}
+			console.log(res);
+			// if (!res.error) {
+			// 	console.log(res);
+			// 	localStorage.setItem("currentuser", JSON.stringify(res));
+			// 	window.location.href = `./userOrderHistory.html`;
+			// }
+			// if (res.error) {
+			// 	alert("Invalid LogIn credentials");
+			// }
 		})
 		.catch((err) => {
 			console.log(err.message);

@@ -80,7 +80,7 @@
     const data = JSON.parse(localStorage.getItem("currentuser"))
     var array
     var user
-    fetch(`http://localhost:2345/user/`,{
+    fetch(`https://porter-backend-nodejs.herokuapp.com/user/`,{
         headers: {
             "Authorization": "Bearer "+ data.accessToken
             //id_token
@@ -89,7 +89,7 @@
     .then(user=>{
         const id = user._id;
         userName(user)
-        fetch(`http://localhost:2345/order/${id}`)
+        fetch(`https://porter-backend-nodejs.herokuapp.com/order/${id}`)
         .then(res=>res.json())
         .then((res)=> {
             array = res.details;
