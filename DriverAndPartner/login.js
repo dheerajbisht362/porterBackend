@@ -123,7 +123,7 @@ function validateSignIn() {
 				}
 			)
 				.then((res) => res.json())
-				.then((res) => console.log(res));
+				.then((res) => res);
 		})
 		.catch((err) => {
 			alert(err.message);
@@ -146,15 +146,13 @@ function validateMyForm() {
 			return res.json();
 		})
 		.then((res) => {
-			console.log(res);
-			// if (!res.error) {
-			// 	console.log(res);
-			// 	localStorage.setItem("currentuser", JSON.stringify(res));
-			// 	window.location.href = `./userOrderHistory.html`;
-			// }
-			// if (res.error) {
-			// 	alert("Invalid LogIn credentials");
-			// }
+			if (!res.error) {
+				localStorage.setItem("currentuser", JSON.stringify(res));
+				window.location.href = `./userOrderHistory.html`;
+			}
+			if (res.error) {
+				alert("Invalid LogIn credentials");
+			}
 		})
 		.catch((err) => {
 			console.log(err.message);
