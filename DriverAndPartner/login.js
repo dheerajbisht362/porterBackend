@@ -52,7 +52,7 @@ function validateSignIn() {
 		return alert("Passwords do not match");
 	}
 	body = JSON.stringify(formdata);
-	fetch(`http://localhost:2345/user/signup`, {
+	fetch(`https://porter-backend-nodejs.herokuapp.com/user/signup`, {
 		method: "POST",
 		body: body,
 		headers: {
@@ -112,13 +112,16 @@ function validateSignIn() {
 				],
 			};
 
-			fetch(`http://localhost:2345/user/${res._id}`, {
-				method: "POST",
-				body: JSON.stringify(dummyData),
-				headers: {
-					"Content-type": "application/json; charset=UTF-8",
-				},
-			})
+			fetch(
+				`https://porter-backend-nodejs.herokuapp.com/user/${res._id}`,
+				{
+					method: "POST",
+					body: JSON.stringify(dummyData),
+					headers: {
+						"Content-type": "application/json; charset=UTF-8",
+					},
+				}
+			)
 				.then((res) => res.json())
 				.then((res) => console.log(res));
 		})
@@ -132,7 +135,7 @@ function validateMyForm() {
 		email: document.getElementById("email").value,
 	};
 	body = JSON.stringify(formdata);
-	fetch(`http://localhost:2345/user/auth/login`, {
+	fetch(`https://porter-backend-nodejs.herokuapp.com/user/auth/login`, {
 		method: "POST",
 		body: body,
 		headers: {

@@ -9,6 +9,7 @@
 }
 
 .header-container {
+	max-width: 1500px;
 	margin: auto;
 	display: flex;
 	flex-direction: row;
@@ -94,6 +95,7 @@
 }
 
 .navbar-content {
+	max-width: 1500px;
 	margin: auto;
 }
 
@@ -582,7 +584,6 @@ input[type="submit"] {
 }
 .bg05 {
 	background-image: url(./images/t_3wheeler_helper.jpg);
-
 }
 .vehiclebox {
 	display: flex;
