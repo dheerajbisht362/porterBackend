@@ -54,7 +54,7 @@ Dummy User Details:
 
 Insert gif or link to demo
 
-![Logo](https://upload.wikimedia.org/wikipedia/commons/e/eb/Porter-logo.png)
+![Logo](https://github.com/dheerajbisht362/constructWeekPorterClone/blob/master/images/porterreadme.jpg)
 
 ## Some Screenshots
 Home page of Porter:
